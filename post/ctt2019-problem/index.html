@@ -1,13 +1,20 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>集训队作业 2019 题解 | 4182_543_731`s blog</title>
-<link rel="shortcut icon" href="https://4182543731.github.io/favicon.ico?v=1614004230923">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://4182543731.github.io/favicon.ico?v=1614004329548">
 <link rel="stylesheet" href="https://4182543731.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="集训队作业 2019 题解 | 4182_543_731`s blog - Atom Feed" href="https://4182543731.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
@@ -18,82 +25,81 @@
 Problem
 给两个点集 A,BA,BA,B ，坐标为整数，求是否存在一个圆，包含所有 AAA 的点且不包含任何一..." />
     <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://4182543731.github.io">
-  <img class="avatar" src="https://4182543731.github.io/images/avatar.png?v=1614004230923" alt="">
-  </a>
-  <h1 class="site-title">
-    4182_543_731`s blog
-  </h1>
-  <p class="site-description">
-    您 您 您 您
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://4182543731.github.io">
+        <img src="https://4182543731.github.io/images/avatar.png?v=1614004329548" class="site-logo">
+        <h1 class="site-title">4182_543_731`s blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="/" class="menu">
-          首页
-        </a>
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
       
-        <a href="/archives" class="menu">
-          归档
-        </a>
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
       
-    
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
       
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
+      
+    </div>
+    <div class="site-description">
+      您 您 您 您
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://4182543731.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              集训队作业 2019 题解
-            </h2>
-            <div class="post-info">
-              <span>
-                2021-02-22
-              </span>
-              <span>
-                638 min read
-              </span>
-              
-            </div>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">集训队作业 2019 题解</h2>
+            <div class="post-date">2021-02-22</div>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p><s>其实是集训队作业总结</s></p>
+            <div class="post-content" v-pre>
+              <p><s>其实是集训队作业总结</s></p>
 <p>题目完成度:134/150</p>
 <p>题解完成度:133/134</p>
 <h5 id="1-cf549e-sasha-circles">1 CF549E Sasha Circles</h5>
@@ -11090,1128 +11096,45 @@ int main()
 }
 </code></pre>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#1-cf549e-sasha-circles">1 CF549E Sasha Circles</a>
-<ul>
-<li><a href="#problem">Problem</a></li>
-<li><a href="#sol">Sol</a></li>
-</ul>
-</li>
-<li><a href="#2-cf674g-choosing-ads">2 CF674G Choosing Ads</a>
-<ul>
-<li><a href="#problem-2">Problem</a></li>
-<li><a href="#sol-2">Sol</a></li>
-<li><a href="#code">Code</a></li>
-</ul>
-</li>
-<li><a href="#3-arc103f-distance-sum">3 ARC103F Distance Sum</a>
-<ul>
-<li><a href="#problem-3">Problem</a></li>
-<li><a href="#sol-3">Sol</a></li>
-<li><a href="#code-2">Code</a></li>
-</ul>
-</li>
-<li><a href="#4-cf594e-cutting-the-line">4 CF594E Cutting the Line</a>
-<ul>
-<li><a href="#problem-4">Problem</a></li>
-<li><a href="#sol-4">Sol</a></li>
-</ul>
-</li>
-<li><a href="#5-agc034f-rng-and-xor">5 AGC034F RNG and XOR</a>
-<ul>
-<li><a href="#problem-5">Problem</a></li>
-<li><a href="#sol-5">Sol</a></li>
-<li><a href="#code-3">Code</a></li>
-</ul>
-</li>
-<li><a href="#6-agc030d-inversion-sum">6 AGC030D Inversion Sum</a>
-<ul>
-<li><a href="#problem-6">Problem</a></li>
-<li><a href="#sol-6">Sol</a></li>
-<li><a href="#code-4">Code</a></li>
-</ul>
-</li>
-<li><a href="#7-cf575e-spectator-riots">7 CF575E Spectator Riots</a>
-<ul>
-<li><a href="#problem-7">Problem</a></li>
-<li><a href="#sol-7">Sol</a></li>
-</ul>
-</li>
-<li><a href="#8-agc035c-skolem-xor-tree">8 AGC035C Skolem XOR Tree</a>
-<ul>
-<li><a href="#problem-8">Problem</a></li>
-<li><a href="#sol-8">Sol</a></li>
-<li><a href="#code-5">Code</a></li>
-</ul>
-</li>
-<li><a href="#9-agc026f-manju-game">9 AGC026F Manju Game</a>
-<ul>
-<li><a href="#problem-9">Problem</a></li>
-<li><a href="#sol-9">Sol</a></li>
-<li><a href="#code-6">Code</a></li>
-</ul>
-</li>
-<li><a href="#10-cf607e-cross-sum">10 CF607E Cross Sum</a>
-<ul>
-<li><a href="#problem-10">Problem</a></li>
-<li><a href="#sol-10">Sol</a></li>
-<li><a href="#code-7">Code</a></li>
-</ul>
-</li>
-<li><a href="#11-agc038e-gachapon">11 AGC038E Gachapon</a>
-<ul>
-<li><a href="#problem-11">Problem</a></li>
-<li><a href="#sol-11">Sol</a></li>
-<li><a href="#code-8">Code</a></li>
-</ul>
-</li>
-<li><a href="#12-agc030c-coloring-torus">12 AGC030C Coloring Torus</a>
-<ul>
-<li><a href="#problem-12">Problem</a></li>
-<li><a href="#sol-12">Sol</a></li>
-<li><a href="#code-9">Code</a></li>
-</ul>
-</li>
-<li><a href="#13-cf611g-new-year-and-cake">13 CF611G New Year and Cake</a>
-<ul>
-<li><a href="#problem-13">Problem</a></li>
-<li><a href="#sol-13">Sol</a></li>
-<li><a href="#code-10">Code</a></li>
-</ul>
-</li>
-<li><a href="#14-agc030d-manhattan-max-matching">14 AGC030D Manhattan Max Matching</a>
-<ul>
-<li><a href="#problem-14">Problem</a></li>
-<li><a href="#sol-14">Sol</a></li>
-<li><a href="#code-11">Code</a></li>
-</ul>
-</li>
-<li><a href="#15-agc024f-simple-subsequence-problem">15 AGC024F Simple Subsequence Problem</a>
-<ul>
-<li><a href="#problem-15">Problem</a></li>
-<li><a href="#sol-15">Sol</a></li>
-<li><a href="#code-12">Code</a></li>
-</ul>
-</li>
-<li><a href="#16-cf571e-geometric-progressions">16 CF571E Geometric Progressions</a>
-<ul>
-<li><a href="#problem-16">Problem</a></li>
-<li><a href="#sol-16">Sol</a></li>
-<li><a href="#code-13">Code</a></li>
-</ul>
-</li>
-<li><a href="#17-cf696f-dary">17 CF696F ..Dary!</a>
-<ul>
-<li><a href="#problem-17">Problem</a></li>
-<li><a href="#sol-17">Sol</a></li>
-<li><a href="#code-14">Code</a></li>
-</ul>
-</li>
-<li><a href="#18-arc093e-bichrome-spanning-tree">18 ARC093E Bichrome Spanning Tree</a>
-<ul>
-<li><a href="#problem-18">Problem</a></li>
-<li><a href="#sol-18">Sol</a></li>
-<li><a href="#code-15">Code</a></li>
-</ul>
-</li>
-<li><a href="#19-cf573e-bear-and-bowling">19 CF573E Bear and Bowling</a>
-<ul>
-<li><a href="#problem-19">Problem</a></li>
-<li><a href="#sol-19">Sol</a></li>
-</ul>
-</li>
-<li><a href="#20-cf704e-iron-man">20 CF704E Iron Man</a>
-<ul>
-<li><a href="#problem-20">Problem</a></li>
-<li><a href="#sol-20">Sol</a></li>
-<li><a href="#code-16">Code</a></li>
-</ul>
-</li>
-<li><a href="#21-arc103d-robot-arms">21 ARC103D Robot Arms</a>
-<ul>
-<li><a href="#problem-21">Problem</a></li>
-<li><a href="#sol-21">Sol</a></li>
-<li><a href="#code-17">Code</a></li>
-</ul>
-</li>
-<li><a href="#22-cf627f-island-puzzle">22 CF627F Island Puzzle</a>
-<ul>
-<li><a href="#problem-22">Problem</a></li>
-<li><a href="#sol-22">Sol</a></li>
-<li><a href="#code-18">Code</a></li>
-</ul>
-</li>
-<li><a href="#23-agc035d-add-and-remove">23 AGC035D Add and Remove</a>
-<ul>
-<li><a href="#problem-23">Problem</a></li>
-<li><a href="#sol-23">Sol</a></li>
-<li><a href="#code-19">Code</a></li>
-</ul>
-</li>
-<li><a href="#24-agc033f-adding-edges">24 AGC033F Adding Edges</a>
-<ul>
-<li><a href="#problem-24">Problem</a></li>
-<li><a href="#sol-24">Sol</a></li>
-</ul>
-</li>
-<li><a href="#25-cf538g-berserk-robot">25 CF538G Berserk Robot</a>
-<ul>
-<li><a href="#problem-25">Problem</a></li>
-<li><a href="#sol-25">Sol</a></li>
-<li><a href="#code-20">Code</a></li>
-</ul>
-</li>
-<li><a href="#26-cf674d-bearish-fanpages">26 CF674D Bearish Fanpages</a>
-<ul>
-<li><a href="#problem-26">Problem</a></li>
-<li><a href="#sol-26">Sol</a></li>
-<li><a href="#code-21">Code</a></li>
-</ul>
-</li>
-<li><a href="#27-arc101f-robots-and-exits">27 ARC101F Robots and Exits</a>
-<ul>
-<li><a href="#problem-27">Problem</a></li>
-<li><a href="#sol-27">Sol</a></li>
-<li><a href="#code-22">Code</a></li>
-</ul>
-</li>
-<li><a href="#28-cf566c-logistical-questions">28 CF566C Logistical Questions</a>
-<ul>
-<li><a href="#problem-28">Problem</a></li>
-<li><a href="#sol-28">Sol</a></li>
-<li><a href="#code-23">Code</a></li>
-</ul>
-</li>
-<li><a href="#29-cf700e-cool-slogans">29 CF700E Cool Slogans</a>
-<ul>
-<li><a href="#problem-29">Problem</a></li>
-<li><a href="#sol-29">Sol</a></li>
-<li><a href="#code-24">Code</a></li>
-</ul>
-</li>
-<li><a href="#30-arc092f-two-faced-edges">30 ARC092F Two Faced Edges</a>
-<ul>
-<li><a href="#problem-30">Problem</a></li>
-<li><a href="#sol-30">Sol</a></li>
-<li><a href="#code-25">Code</a></li>
-</ul>
-</li>
-<li><a href="#31-cf566e-restoring-map">31 CF566E Restoring Map</a>
-<ul>
-<li><a href="#problem-31">Problem</a></li>
-<li><a href="#sol-31">Sol</a></li>
-<li><a href="#code-26">Code</a></li>
-</ul>
-</li>
-<li><a href="#32-agc034e-complete-compress">32 AGC034E Complete Compress</a>
-<ul>
-<li><a href="#problem-32">Problem</a></li>
-<li><a href="#sol-32">Sol</a></li>
-<li><a href="#code-27">Code</a></li>
-</ul>
-</li>
-<li><a href="#33-agc022d-shopping">33 AGC022D Shopping</a>
-<ul>
-<li><a href="#problem-33">Problem</a></li>
-<li><a href="#sol-33">Sol</a></li>
-<li><a href="#code-28">Code</a></li>
-</ul>
-</li>
-<li><a href="#34-cf613e-puzzle-lover">34 CF613E Puzzle Lover</a>
-<ul>
-<li><a href="#problem-34">Problem</a></li>
-<li><a href="#sol-34">Sol</a></li>
-<li><a href="#code-29">Code</a></li>
-</ul>
-</li>
-<li><a href="#35-agc033e-go-around-a-circle">35 AGC033E Go around a Circle</a>
-<ul>
-<li><a href="#problem-35">Problem</a></li>
-<li><a href="#sol-35">Sol</a></li>
-<li><a href="#code-30">Code</a></li>
-</ul>
-</li>
-<li><a href="#36-agc021f-trinity">36 AGC021F Trinity</a>
-<ul>
-<li><a href="#problem-36">Problem</a></li>
-<li><a href="#sol-36">Sol</a></li>
-<li><a href="#code-31">Code</a></li>
-</ul>
-</li>
-<li><a href="#37-cf528c-data-center-drama">37 CF528C Data Center Drama</a>
-<ul>
-<li><a href="#problem-37">Problem</a></li>
-<li><a href="#sol-37">Sol</a></li>
-<li><a href="#code-32">Code</a></li>
-</ul>
-</li>
-<li><a href="#38-agc038f-two-permutations">38 AGC038F Two Permutations</a>
-<ul>
-<li><a href="#problem-38">Problem</a></li>
-<li><a href="#sol-38">Sol</a></li>
-<li><a href="#code-33">Code</a></li>
-</ul>
-</li>
-<li><a href="#39-agc029e-wandering-tkhs">39 AGC029E Wandering TKHS</a>
-<ul>
-<li><a href="#problem-39">Problem</a></li>
-<li><a href="#sol-39">Sol</a></li>
-<li><a href="#code-34">Code</a></li>
-</ul>
-</li>
-<li><a href="#40-cf611h-new-year-and-forgotten-tree">40 CF611H New Year and Forgotten Tree</a>
-<ul>
-<li><a href="#problem-40">Problem</a></li>
-<li><a href="#sol-40">Sol</a></li>
-<li><a href="#code-35">Code</a></li>
-</ul>
-</li>
-<li><a href="#41-agc036d-negative-cycle">41 AGC036D Negative Cycle</a>
-<ul>
-<li><a href="#problem-41">Problem</a></li>
-<li><a href="#sol-41">Sol</a></li>
-<li><a href="#code-36">Code</a></li>
-</ul>
-</li>
-<li><a href="#42-agc027e-abbreviate">42 AGC027E ABBreviate</a>
-<ul>
-<li><a href="#problem-42">Problem</a></li>
-<li><a href="#sol-42">Sol</a></li>
-<li><a href="#code-37">Code</a></li>
-</ul>
-</li>
-<li><a href="#43-cf626g-raffles">43 CF626G Raffles</a>
-<ul>
-<li><a href="#problem-43">Problem</a></li>
-<li><a href="#sol-43">Sol</a></li>
-<li><a href="#code-38">Code</a></li>
-</ul>
-</li>
-<li><a href="#44-cf666d-chain-reaction">44 CF666D Chain Reaction</a>
-<ul>
-<li><a href="#problem-44">Problem</a></li>
-<li><a href="#sol-44">Sol</a></li>
-<li><a href="#code-39">Code</a></li>
-</ul>
-</li>
-<li><a href="#45-arc102f-revenge-of-bbubbblesort">45 ARC102F Revenge of BBuBBBlesort!</a>
-<ul>
-<li><a href="#problem-45">Problem</a></li>
-<li><a href="#sol-45">Sol</a></li>
-<li><a href="#code-40">Code</a></li>
-</ul>
-</li>
-<li><a href="#46-cf605e-intergalaxy-trips">46 CF605E Intergalaxy Trips</a>
-<ul>
-<li><a href="#problem-46">Problem</a></li>
-<li><a href="#sol-46">Sol</a></li>
-<li><a href="#code-41">Code</a></li>
-</ul>
-</li>
-<li><a href="#47-agc031e-snuke-the-phantom-thief">47 AGC031E Snuke the Phantom Thief</a>
-<ul>
-<li><a href="#problem-47">Problem</a></li>
-<li><a href="#sol-47">Sol</a></li>
-<li><a href="#code-42">Code</a></li>
-</ul>
-</li>
-<li><a href="#48-agc028d-chords">48 AGC028D Chords</a>
-<ul>
-<li><a href="#problem-48">Problem</a></li>
-<li><a href="#sol-48">Sol</a></li>
-<li><a href="#code-43">Code</a></li>
-</ul>
-</li>
-<li><a href="#49-cf536d-tavas-in-kansas">49 CF536D Tavas in Kansas</a>
-<ul>
-<li><a href="#problem-49">Problem</a></li>
-<li><a href="#sol-49">Sol</a></li>
-<li><a href="#code-44">Code</a></li>
-</ul>
-</li>
-<li><a href="#50-agc027f-grafting">50 AGC027F Grafting</a>
-<ul>
-<li><a href="#problem-50">Problem</a></li>
-<li><a href="#sol-50">Sol</a></li>
-<li><a href="#code-45">Code</a></li>
-</ul>
-</li>
-<li><a href="#51-agc024e-sequence-growing-hard">51 AGC024E Sequence Growing Hard</a>
-<ul>
-<li><a href="#problem-51">Problem</a></li>
-<li><a href="#sol-51">Sol</a></li>
-<li><a href="#code-46">Code</a></li>
-</ul>
-</li>
-<li><a href="#52-cf553e-kyoya-and-train">52 CF553E Kyoya and Train</a>
-<ul>
-<li><a href="#problem-52">Problem</a></li>
-<li><a href="#sol-52">Sol</a></li>
-<li><a href="#code-47">Code</a></li>
-</ul>
-</li>
-<li><a href="#53-agc037f-counting-of-subarrays">53 AGC037F Counting of Subarrays</a>
-<ul>
-<li><a href="#problem-53">Problem</a></li>
-<li><a href="#sol-53">Sol</a></li>
-<li><a href="#code-48">Code</a></li>
-</ul>
-</li>
-<li><a href="#54-agc029c-lexicographic-constraints">54 AGC029C Lexicographic Constraints</a>
-<ul>
-<li><a href="#problem-54">Problem</a></li>
-<li><a href="#sol-54">Sol</a></li>
-<li><a href="#code-49">Code</a></li>
-</ul>
-</li>
-<li><a href="#55-cf571d-campus">55 CF571D Campus</a>
-<ul>
-<li><a href="#problem-55">Problem</a></li>
-<li><a href="#sol-55">Sol</a></li>
-<li><a href="#code-50">Code</a></li>
-</ul>
-</li>
-<li><a href="#56-cf708e-students-camp">56 CF708E Student's Camp</a>
-<ul>
-<li><a href="#problem-56">Problem</a></li>
-<li><a href="#sol-56">Sol</a></li>
-<li><a href="#code-51">Code</a></li>
-</ul>
-</li>
-<li><a href="#57-agc093f-dark-horse">57 AGC093F Dark Horse</a>
-<ul>
-<li><a href="#problem-57">Problem</a></li>
-<li><a href="#sol-57">Sol</a></li>
-<li><a href="#code-52">Code</a></li>
-</ul>
-</li>
-<li><a href="#58-cf603e-pastoral-oddities">58 CF603E Pastoral Oddities</a>
-<ul>
-<li><a href="#problem-58">Problem</a></li>
-<li><a href="#sol-58">Sol</a></li>
-<li><a href="#code-53">Code</a></li>
-</ul>
-</li>
-<li><a href="#59-agc036e-abc-string">59 AGC036E ABC String</a>
-<ul>
-<li><a href="#problem-59">Problem</a></li>
-<li><a href="#sol-59">Sol</a></li>
-<li><a href="#code-54">Code</a></li>
-</ul>
-</li>
-<li><a href="#60-agc021e-ball-eat-chameleon">60 AGC021E Ball Eat Chameleon</a>
-<ul>
-<li><a href="#problem-60">Problem</a></li>
-<li><a href="#sol-60">Sol</a></li>
-<li><a href="#code-55">Code</a></li>
-</ul>
-</li>
-<li><a href="#61-cf590e-birthday">61 CF590E Birthday</a>
-<ul>
-<li><a href="#problem-61">Problem</a></li>
-<li><a href="#sol-61">Sol</a></li>
-</ul>
-</li>
-<li><a href="#62-agc031d-a-sequence-of-permutations">62 AGC031D A Sequence of Permutations</a>
-<ul>
-<li><a href="#problem-62">Problem</a></li>
-<li><a href="#sol-62">Sol</a></li>
-<li><a href="#code-56">Code</a></li>
-</ul>
-</li>
-<li><a href="#63-agc026e-synchronized-subsequence">63 AGC026E Synchronized Subsequence</a>
-<ul>
-<li><a href="#problem-63">Problem</a></li>
-<li><a href="#sol-63">Sol</a></li>
-<li><a href="#code-57">Code</a></li>
-</ul>
-</li>
-<li><a href="#64-cf587e-duff-is-mad">64 CF587E Duff is Mad</a>
-<ul>
-<li><a href="#problem-64">Problem</a></li>
-<li><a href="#sol-64">Sol</a></li>
-<li><a href="#code-58">Code</a></li>
-</ul>
-</li>
-<li><a href="#65-cf685c-optimal-point">65 CF685C Optimal Point</a>
-<ul>
-<li><a href="#problem-65">Problem</a></li>
-<li><a href="#sol-65">Sol</a></li>
-<li><a href="#code-59">Code</a></li>
-</ul>
-</li>
-<li><a href="#66-arc096e-everything-on-it">66 ARC096E Everything on It</a>
-<ul>
-<li><a href="#problem-66">Problem</a></li>
-<li><a href="#sol-66">Sol</a></li>
-<li><a href="#code-60">Code</a></li>
-</ul>
-</li>
-<li><a href="#67-cf587d-duff-in-mafia">67 CF587D Duff in Mafia</a>
-<ul>
-<li><a href="#problem-67">Problem</a></li>
-<li><a href="#sol-67">Sol</a></li>
-<li><a href="#code-61">Code</a></li>
-</ul>
-</li>
-<li><a href="#68-cf643f-bears-and-juice">68 CF643F Bears and Juice</a>
-<ul>
-<li><a href="#problem-68">Problem</a></li>
-<li><a href="#sol-68">Sol</a></li>
-<li><a href="#code-62">Code</a></li>
-</ul>
-</li>
-<li><a href="#69-arc091f-strange-nim">69 ARC091F Strange Nim</a>
-<ul>
-<li><a href="#problem-69">Problem</a></li>
-<li><a href="#sol-69">Sol</a></li>
-<li><a href="#code-63">Code</a></li>
-</ul>
-</li>
-<li><a href="#70-cf575i-robots-protection">70 CF575I Robots protection</a>
-<ul>
-<li><a href="#problem-70">Problem</a></li>
-<li><a href="#sol-70">Sol</a></li>
-<li><a href="#code-64">Code</a></li>
-</ul>
-</li>
-<li><a href="#71-agc035f-two-histograms">71 AGC035F Two Histograms</a>
-<ul>
-<li><a href="#problem-71">Problem</a></li>
-<li><a href="#sol-71">Sol</a></li>
-<li><a href="#code-65">Code</a></li>
-</ul>
-</li>
-<li><a href="#72-agc028f2-reachable-cells">72 AGC028F2 Reachable Cells</a>
-<ul>
-<li><a href="#problem-72">Problem</a></li>
-<li><a href="#sol-72">Sol</a></li>
-</ul>
-</li>
-<li><a href="#73-cf504e-misha-and-lcp-on-tree">73 CF504E Misha and LCP on Tree</a>
-<ul>
-<li><a href="#problem-73">Problem</a></li>
-<li><a href="#sol-73">Sol</a></li>
-<li><a href="#code-66">Code</a></li>
-</ul>
-</li>
-<li><a href="#74-cf671e-organizing-a-race">74 CF671E Organizing a Race</a>
-<ul>
-<li><a href="#problem-74">Problem</a></li>
-<li><a href="#sol-74">Sol</a></li>
-</ul>
-</li>
-<li><a href="#75-arc101e-ribbons-on-tree">75 ARC101E Ribbons on Tree</a>
-<ul>
-<li><a href="#problem-75">Problem</a></li>
-<li><a href="#sol-75">Sol</a></li>
-<li><a href="#code-67">Code</a></li>
-</ul>
-</li>
-<li><a href="#76-cf585f-digits-of-number-pi">76 CF585F Digits of Number Pi</a>
-<ul>
-<li><a href="#problem-76">Problem</a></li>
-<li><a href="#sol-76">Sol</a></li>
-<li><a href="#code-68">Code</a></li>
-</ul>
-</li>
-<li><a href="#77-cf708d-incorrect-flow">77 CF708D Incorrect Flow</a>
-<ul>
-<li><a href="#problem-77">Problem</a></li>
-<li><a href="#sol-77">Sol</a></li>
-<li><a href="#code-69">Code</a></li>
-</ul>
-</li>
-<li><a href="#78-arc095f-permutation-tree">78 ARC095F Permutation Tree</a>
-<ul>
-<li><a href="#problem-78">Problem</a></li>
-<li><a href="#sol-78">Sol</a></li>
-<li><a href="#code-70">Code</a></li>
-</ul>
-</li>
-<li><a href="#79-cf521d-shop">79 CF521D Shop</a>
-<ul>
-<li><a href="#problem-79">Problem</a></li>
-<li><a href="#sol-79">Sol</a></li>
-<li><a href="#code-71">Code</a></li>
-</ul>
-</li>
-<li><a href="#80-agc036f-square-constraints">80 AGC036F Square Constraints</a>
-<ul>
-<li><a href="#problem-80">Problem</a></li>
-<li><a href="#sol-80">Sol</a></li>
-</ul>
-</li>
-<li><a href="#81-agc028c-min-cost-cycle">81 AGC028C Min Cost Cycle</a>
-<ul>
-<li><a href="#problem-81">Problem</a></li>
-<li><a href="#sol-81">Sol</a></li>
-<li><a href="#code-72">Code</a></li>
-</ul>
-</li>
-<li><a href="#82-cf585e-present-for-vitalik-the-philatelist">82 CF585E Present for Vitalik the Philatelist</a>
-<ul>
-<li><a href="#problem-82">Problem</a></li>
-<li><a href="#sol-82">Sol</a></li>
-<li><a href="#code-73">Code</a></li>
-</ul>
-</li>
-<li><a href="#83-agc032c-three-circuits">83 AGC032C Three Circuits</a>
-<ul>
-<li><a href="#problem-83">Problem</a></li>
-<li><a href="#sol-83">Sol</a></li>
-<li><a href="#code-74">Code</a></li>
-</ul>
-</li>
-<li><a href="#84-agc023f-01-on-tree">84 AGC023F 01 on Tree</a>
-<ul>
-<li><a href="#problem-84">Problem</a></li>
-<li><a href="#sol-84">Sol</a></li>
-<li><a href="#code-75">Code</a></li>
-</ul>
-</li>
-<li><a href="#85-cf568c-new-language">85 CF568C New Language</a>
-<ul>
-<li><a href="#problem-85">Problem</a></li>
-<li><a href="#sol-85">Sol</a></li>
-<li><a href="#code-76">Code</a></li>
-</ul>
-</li>
-<li><a href="#86-cf666e-forensic-examination">86 CF666E Forensic Examination</a>
-<ul>
-<li><a href="#problem-86">Problem</a></li>
-<li><a href="#sol-86">Sol</a></li>
-</ul>
-</li>
-<li><a href="#87-agc025e-walking-on-a-tree">87 AGC025E Walking on a Tree</a>
-<ul>
-<li><a href="#problem-87">Problem</a></li>
-<li><a href="#sol-87">Sol</a></li>
-<li><a href="#code-77">Code</a></li>
-</ul>
-</li>
-<li><a href="#88-cf568e-longest-increasing-subsequence">88 CF568E Longest Increasing Subsequence</a>
-<ul>
-<li><a href="#problem-88">Problem</a></li>
-<li><a href="#sol-88">Sol</a></li>
-<li><a href="#code-78">Code</a></li>
-</ul>
-</li>
-<li><a href="#89-cf704c-black-widow">89 CF704C Black Widow</a>
-<ul>
-<li><a href="#problem-89">Problem</a></li>
-<li><a href="#sol-89">Sol</a></li>
-<li><a href="#code-79">Code</a></li>
-</ul>
-</li>
-<li><a href="#90-arc100f-colorful-sequence">90 ARC100F Colorful Sequence</a>
-<ul>
-<li><a href="#problem-90">Problem</a></li>
-<li><a href="#sol-90">Sol</a></li>
-<li><a href="#code-80">Code</a></li>
-</ul>
-</li>
-<li><a href="#91-cf538h-summer-dichotomy">91 CF538H Summer Dichotomy</a>
-<ul>
-<li><a href="#problem-91">Problem</a></li>
-<li><a href="#sol-91">Sol</a></li>
-<li><a href="#code-81">Code</a></li>
-</ul>
-</li>
-<li><a href="#92-agc032d-rotation-sort">92 AGC032D Rotation Sort</a>
-<ul>
-<li><a href="#problem-92">Problem</a></li>
-<li><a href="#sol-92">Sol</a></li>
-<li><a href="#code-82">Code</a></li>
-</ul>
-</li>
-<li><a href="#93-agc024d-isomorphism-freak">93 AGC024D Isomorphism Freak</a>
-<ul>
-<li><a href="#problem-93">Problem</a></li>
-<li><a href="#sol-93">Sol</a></li>
-<li><a href="#code-83">Code</a></li>
-</ul>
-</li>
-<li><a href="#94-cf582e-boolean-function">94 CF582E Boolean Function</a>
-<ul>
-<li><a href="#problem-94">Problem</a></li>
-<li><a href="#sol-94">Sol</a></li>
-<li><a href="#code-84">Code</a></li>
-</ul>
-</li>
-<li><a href="#95-agc039e-pairing-points">95 AGC039E Pairing Points</a>
-<ul>
-<li><a href="#problem-95">Problem</a></li>
-<li><a href="#sol-95">Sol</a></li>
-<li><a href="#code-85">Code</a></li>
-</ul>
-</li>
-<li><a href="#96-agc025f-addition-and-andition">96 AGC025F Addition and Andition</a>
-<ul>
-<li><a href="#problem-96">Problem</a></li>
-<li><a href="#sol-96">Sol</a></li>
-</ul>
-</li>
-<li><a href="#97-cf526f-pudding-monsters">97 CF526F Pudding Monsters</a>
-<ul>
-<li><a href="#problem-97">Problem</a></li>
-<li><a href="#sol-97">Sol</a></li>
-<li><a href="#code-86">Code</a></li>
-</ul>
-</li>
-<li><a href="#98-agc037d-sorting-a-grid">98 AGC037D Sorting a Grid</a>
-<ul>
-<li><a href="#problem-98">Problem</a></li>
-<li><a href="#sol-98">Sol</a></li>
-<li><a href="#code-87">Code</a></li>
-</ul>
-</li>
-<li><a href="#99-agc020e-encoding-subsets">99 AGC020E Encoding Subsets</a>
-<ul>
-<li><a href="#problem-99">Problem</a></li>
-<li><a href="#sol-99">Sol</a></li>
-<li><a href="#code-88">Code</a></li>
-</ul>
-</li>
-<li><a href="#100-cf521e-cycling-city">100 CF521E Cycling City</a>
-<ul>
-<li><a href="#problem-100">Problem</a></li>
-<li><a href="#sol-100">Sol</a></li>
-<li><a href="#code-89">Code</a></li>
-</ul>
-</li>
-<li><a href="#101-agc030f-permutation-and-minimum">101 AGC030F Permutation and Minimum</a>
-<ul>
-<li><a href="#problem-101">Problem</a></li>
-<li><a href="#sol-101">Sol</a></li>
-<li><a href="#code-90">Code</a></li>
-</ul>
-</li>
-<li><a href="#102-agc026d-histogram-coloring">102 AGC026D Histogram Coloring</a>
-<ul>
-<li><a href="#problem-102">Problem</a></li>
-<li><a href="#sol-102">Sol</a></li>
-<li><a href="#code-91">Code</a></li>
-</ul>
-</li>
-<li><a href="#103-cf526g-spiders-evil-plan">103 CF526G Spiders Evil Plan</a>
-<ul>
-<li><a href="#problem-103">Problem</a></li>
-<li><a href="#sol-103">Sol</a></li>
-</ul>
-</li>
-<li><a href="#104-cf698d-limak-and-shooting-points">104 CF698D Limak and Shooting Points</a>
-<ul>
-<li><a href="#problem-104">Problem</a></li>
-<li><a href="#sol-104">Sol</a></li>
-<li><a href="#code-92">Code</a></li>
-</ul>
-</li>
-<li><a href="#105-arc089f-coloringballs">105 ARC089F ColoringBalls</a>
-<ul>
-<li><a href="#problem-105">Problem</a></li>
-<li><a href="#sol-105">Sol</a></li>
-<li><a href="#code-93">Code</a></li>
-</ul>
-</li>
-<li><a href="#106-cf582d-number-of-binominal-coefficients">106 CF582D Number of Binominal Coefficients</a>
-<ul>
-<li><a href="#problem-106">Problem</a></li>
-<li><a href="#sol-106">Sol</a></li>
-<li><a href="#code-94">Code</a></li>
-</ul>
-</li>
-<li><a href="#107-cf634f-orchestra">107 CF634F Orchestra</a>
-<ul>
-<li><a href="#problem-107">Problem</a></li>
-<li><a href="#sol-107">Sol</a></li>
-<li><a href="#code-95">Code</a></li>
-</ul>
-</li>
-<li><a href="#108-agc020d-min-max-repetition">108 AGC020D Min Max Repetition</a>
-<ul>
-<li><a href="#problem-108">Problem</a></li>
-<li><a href="#sol-108">Sol</a></li>
-<li><a href="#code-96">Code</a></li>
-</ul>
-</li>
-<li><a href="#109-cf578f-mirror-box">109 CF578F Mirror Box</a>
-<ul>
-<li><a href="#problem-109">Problem</a></li>
-<li><a href="#sol-109">Sol</a></li>
-</ul>
-</li>
-<li><a href="#110-cf704b-ant-man">110 CF704B Ant Man</a>
-<ul>
-<li><a href="#problem-110">Problem</a></li>
-<li><a href="#sol-110">Sol</a></li>
-<li><a href="#code-97">Code</a></li>
-</ul>
-</li>
-<li><a href="#111-arc099f-eating-symbols-hard">111 ARC099F Eating Symbols Hard</a>
-<ul>
-<li><a href="#problem-111">Problem</a></li>
-<li><a href="#sol-111">Sol</a></li>
-<li><a href="#code-98">Code</a></li>
-</ul>
-</li>
-<li><a href="#112-cf578e-walking">112 CF578E Walking!</a>
-<ul>
-<li><a href="#problem-112">Problem</a></li>
-<li><a href="#sol-112">Sol</a></li>
-<li><a href="#code-99">Code</a></li>
-</ul>
-</li>
-<li><a href="#113-agc035e-develop">113 AGC035E Develop</a>
-<ul>
-<li><a href="#problem-113">Problem</a></li>
-<li><a href="#sol-113">Sol</a></li>
-<li><a href="#code-100">Code</a></li>
-</ul>
-</li>
-<li><a href="#114-agc025d-choosing-points">114 AGC025D Choosing Points</a>
-<ul>
-<li><a href="#problem-114">Problem</a></li>
-<li><a href="#sol-114">Sol</a></li>
-<li><a href="#code-101">Code</a></li>
-</ul>
-</li>
-<li><a href="#115-cf516e-drazil-and-his-happy-friends">115 CF516E Drazil and His Happy Friends</a>
-<ul>
-<li><a href="#problem-115">Problem</a></li>
-<li><a href="#sol-115">Sol</a></li>
-<li><a href="#code-102">Code</a></li>
-</ul>
-</li>
-<li><a href="#116-agc030e-less-than-3">116 AGC030E Less than 3</a>
-<ul>
-<li><a href="#problem-116">Problem</a></li>
-<li><a href="#sol-116">Sol</a></li>
-<li><a href="#code-103">Code</a></li>
-</ul>
-</li>
-<li><a href="#117-agc027d-modulo-matrix">117 AGC027D Modulo Matrix</a>
-<ul>
-<li><a href="#problem-117">Problem</a></li>
-<li><a href="#sol-117">Sol</a></li>
-<li><a href="#code-104">Code</a></li>
-</ul>
-</li>
-<li><a href="#118-cf576e-painting-edges">118 CF576E Painting Edges</a>
-<ul>
-<li><a href="#problem-118">Problem</a></li>
-<li><a href="#sol-118">Sol</a></li>
-<li><a href="#code-105">Code</a></li>
-</ul>
-</li>
-<li><a href="#119-cf704d-captain-america">119 CF704D Captain America</a>
-<ul>
-<li><a href="#problem-119">Problem</a></li>
-<li><a href="#sol-119">Sol</a></li>
-<li><a href="#code-106">Code</a></li>
-</ul>
-</li>
-<li><a href="#120-arc096f-sweet-alchemy">120 ARC096F Sweet Alchemy</a>
-<ul>
-<li><a href="#problem-120">Problem</a></li>
-<li><a href="#sol-120">Sol</a></li>
-<li><a href="#code-107">Code</a></li>
-</ul>
-</li>
-<li><a href="#121-cf671d-roads-in-yusland">121 CF671D Roads in Yusland</a>
-<ul>
-<li><a href="#problem-121">Problem</a></li>
-<li><a href="#sol-121">Sol</a></li>
-<li><a href="#code-108">Code</a></li>
-</ul>
-</li>
-<li><a href="#cf547e-mike-and-friends">CF547E Mike and Friends</a>
-<ul>
-<li><a href="#problem-122">Problem</a></li>
-<li><a href="#sol-122">Sol</a></li>
-<li><a href="#code-109">Code</a></li>
-</ul>
-</li>
-<li><a href="#123-arc097f-monochrome-cat">123 ARC097F Monochrome Cat</a>
-<ul>
-<li><a href="#problem-123">Problem</a></li>
-<li><a href="#sol-123">Sol</a></li>
-<li><a href="#code-110">Code</a></li>
-</ul>
-</li>
-<li><a href="#124-cf547e-mike-and-fish">124 CF547E Mike and Fish</a>
-<ul>
-<li><a href="#problem-124">Problem</a></li>
-<li><a href="#sol-124">Sol</a></li>
-<li><a href="#code-111">Code</a></li>
-</ul>
-</li>
-<li><a href="#125-agc033d-complexity">125 AGC033D Complexity</a>
-<ul>
-<li><a href="#problem-125">Problem</a></li>
-<li><a href="#sol-125">Sol</a></li>
-<li><a href="#code-112">Code</a></li>
-</ul>
-</li>
-<li><a href="#126-agc031f-walk-on-graph">126 AGC031F Walk on Graph</a>
-<ul>
-<li><a href="#problem-126">Problem</a></li>
-<li><a href="#sol-126">Sol</a></li>
-</ul>
-</li>
-<li><a href="#127-cf575a-fibonotci">127 CF575A Fibonotci</a>
-<ul>
-<li><a href="#problem-127">Problem</a></li>
-<li><a href="#sol-127">Sol</a></li>
-<li><a href="#code-113">Code</a></li>
-</ul>
-</li>
-<li><a href="#128-cf639e-bear-and-paradox">128 CF639E Bear and Paradox</a>
-<ul>
-<li><a href="#problem-128">Problem</a></li>
-<li><a href="#sol-128">Sol</a></li>
-<li><a href="#code-114">Code</a></li>
-</ul>
-</li>
-<li><a href="#129-agc039f-min-product-sum">129 AGC039F Min Product Sum</a>
-<ul>
-<li><a href="#problem-129">Problem</a></li>
-<li><a href="#sol-129">Sol</a></li>
-<li><a href="#code-115">Code</a></li>
-</ul>
-</li>
-<li><a href="#130-cf559e-gerald-and-path">130 CF559E Gerald and Path</a>
-<ul>
-<li><a href="#problem-130">Problem</a></li>
-<li><a href="#sol-130">Sol</a></li>
-<li><a href="#code-116">Code</a></li>
-</ul>
-</li>
-<li><a href="#131-agc037e-reversing-and-concatenating">131 AGC037E Reversing and Concatenating</a>
-<ul>
-<li><a href="#problem-131">Problem</a></li>
-<li><a href="#sol-131">Sol</a></li>
-<li><a href="#code-117">Code</a></li>
-</ul>
-</li>
-<li><a href="#132-agc020f-arcs-on-a-circle">132 AGC020F Arcs on a Circle</a>
-<ul>
-<li><a href="#problem-132">Problem</a></li>
-<li><a href="#sol-132">Sol</a></li>
-<li><a href="#code-118">Code</a></li>
-</ul>
-</li>
-<li><a href="#133-cf512d-fox-and-travelling">133 CF512D Fox And Travelling</a>
-<ul>
-<li><a href="#problem-133">Problem</a></li>
-<li><a href="#sol-133">Sol</a></li>
-<li><a href="#code-119">Code</a></li>
-</ul>
-</li>
-<li><a href="#134-agc028e-high-elements">134 AGC028E High Elements</a>
-<ul>
-<li><a href="#problem-134">Problem</a></li>
-<li><a href="#sol-134">Sol</a></li>
-</ul>
-</li>
-<li><a href="#135-agc022f-checkers">135 AGC022F Checkers</a>
-<ul>
-<li><a href="#problem-135">Problem</a></li>
-<li><a href="#sol-135">Sol</a></li>
-<li><a href="#code-120">Code</a></li>
-</ul>
-</li>
-<li><a href="#136-cf506e-mr-kitayutas-gift">136 CF506E Mr. Kitayuta's Gift</a>
-<ul>
-<li><a href="#problem-136">Problem</a></li>
-<li><a href="#sol-136">Sol</a></li>
-<li><a href="#code-121">Code</a></li>
-</ul>
-</li>
-<li><a href="#137-cf639f-bear-and-chemistry">137 CF639F Bear and Chemistry</a>
-<ul>
-<li><a href="#problem-137">Problem</a></li>
-<li><a href="#sol-137">Sol</a></li>
-<li><a href="#code-122">Code</a></li>
-</ul>
-</li>
-<li><a href="#138-agc039d-incenters">138 AGC039D Incenters</a>
-<ul>
-<li><a href="#problem-138">Problem</a></li>
-<li><a href="#sol-138">Sol</a></li>
-<li><a href="#code-123">Code</a></li>
-</ul>
-</li>
-<li><a href="#139-cf576d-flights-for-regular-customers">139 CF576D Flights for Regular Customers</a>
-<ul>
-<li><a href="#problem-139">Problem</a></li>
-<li><a href="#sol-139">Sol</a></li>
-<li><a href="#code-124">Code</a></li>
-</ul>
-</li>
-<li><a href="#140-agc029f-construction-of-a-tree">140 AGC029F Construction of a tree</a>
-<ul>
-<li><a href="#problem-140">Problem</a></li>
-<li><a href="#sol-140">Sol</a></li>
-<li><a href="#code-125">Code</a></li>
-</ul>
-</li>
-<li><a href="#141-agc022e-median-replace">141 AGC022E Median Replace</a>
-<ul>
-<li><a href="#problem-141">Problem</a></li>
-<li><a href="#sol-141">Sol</a></li>
-<li><a href="#code-126">Code</a></li>
-</ul>
-</li>
-<li><a href="#142-cf555e-case-of-computer-network">142 CF555E Case of Computer Network</a>
-<ul>
-<li><a href="#problem-142">Problem</a></li>
-<li><a href="#sol-142">Sol</a></li>
-<li><a href="#code-127">Code</a></li>
-</ul>
-</li>
-<li><a href="#143-agc032e-module-pairing">143 AGC032E Module Pairing</a>
-<ul>
-<li><a href="#problem-143">Problem</a></li>
-<li><a href="#sol-143">Sol</a></li>
-<li><a href="#code-128">Code</a></li>
-</ul>
-</li>
-<li><a href="#144-agc023d-go-home">144 AGC023D Go Home</a>
-<ul>
-<li><a href="#problem-144">Problem</a></li>
-<li><a href="#sol-144">Sol</a></li>
-<li><a href="#code-129">Code</a></li>
-</ul>
-</li>
-<li><a href="#145-cf506c-mr-kitayuta-vs-bamboos">145 CF506C Mr. Kitayuta vs. Bamboos</a>
-<ul>
-<li><a href="#problem-145">Problem</a></li>
-<li><a href="#sol-145">Sol</a></li>
-<li><a href="#sol-146">Sol</a></li>
-</ul>
-</li>
-<li><a href="#146-cf679e-bear-and-bad-powers-of-42">146 CF679E Bear and Bad Powers of 42</a>
-<ul>
-<li><a href="#problem-146">Problem</a></li>
-<li><a href="#sol-147">Sol</a></li>
-<li><a href="#code-130">Code</a></li>
-</ul>
-</li>
-<li><a href="#147-arc098f-donation">147 ARC098F Donation</a>
-<ul>
-<li><a href="#problem-147">Problem</a></li>
-<li><a href="#sol-148">Sol</a></li>
-<li><a href="#code-131">Code</a></li>
-</ul>
-</li>
-<li><a href="#148-cf516d-drazil-and-morning-exercise">148 CF516D Drazil and Morning Exercise</a>
-<ul>
-<li><a href="#problem-148">Problem</a></li>
-<li><a href="#sol-149">Sol</a></li>
-<li><a href="#code-132">Code</a></li>
-</ul>
-</li>
-<li><a href="#149-agc032f-one-third">149 AGC032F One Third</a>
-<ul>
-<li><a href="#problem-149">Problem</a></li>
-<li><a href="#sol-150">Sol</a></li>
-</ul>
-</li>
-<li><a href="#150-agc023e-inversions">150 AGC023E Inversions</a>
-<ul>
-<li><a href="#problem-150">Problem</a></li>
-<li><a href="#sol-151">Sol</a></li>
-<li><a href="#code-133">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-              </div>
             </div>
-          </article>
-        </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://4182543731.github.io/post/auoj-problem/">
+                  <h3 class="post-title">
+                    AUOJ 部分题目题解集合
+                  </h3>
+                </a>
+              </div>
+            
 
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://4182543731.github.io/post/auoj-problem/">
-              <h3 class="post-title">
-                AUOJ 部分题目题解集合
-              </h3>
-            </a>
+            
+
           </div>
-        
 
-        
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://4182543731.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
+        </div>
       </div>
     </div>
 
-    <script>
-      hljs.initHighlightingOnLoad()
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+AOS.init();
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
+</script>
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
+
+
+
   </body>
 </html>

@@ -1,13 +1,20 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>AUOJ 部分题目题解集合 | 4182_543_731`s blog</title>
-<link rel="shortcut icon" href="https://4182543731.github.io/favicon.ico?v=1614004230923">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://4182543731.github.io/favicon.ico?v=1614004329548">
 <link rel="stylesheet" href="https://4182543731.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="AUOJ 部分题目题解集合 | 4182_543_731`s blog - Atom Feed" href="https://4182543731.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
@@ -16,82 +23,81 @@ auoj2 天才数学少女
 Problem
 有 qqq 组询问，每次给定 a,pa,pa,p ，求一个在 [0,2×1018][0,2\times 10^{18}][0,2×1018] 的正整数 nnn ,使得 an≡n( m..." />
     <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://4182543731.github.io">
-  <img class="avatar" src="https://4182543731.github.io/images/avatar.png?v=1614004230923" alt="">
-  </a>
-  <h1 class="site-title">
-    4182_543_731`s blog
-  </h1>
-  <p class="site-description">
-    您 您 您 您
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://4182543731.github.io">
+        <img src="https://4182543731.github.io/images/avatar.png?v=1614004329548" class="site-logo">
+        <h1 class="site-title">4182_543_731`s blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="/" class="menu">
-          首页
-        </a>
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
       
-        <a href="/archives" class="menu">
-          归档
-        </a>
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
       
-    
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
       
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
+      
+    </div>
+    <div class="site-description">
+      您 您 您 您
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://4182543731.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              AUOJ 部分题目题解集合
-            </h2>
-            <div class="post-info">
-              <span>
-                2021-02-22
-              </span>
-              <span>
-                684 min read
-              </span>
-              
-            </div>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">AUOJ 部分题目题解集合</h2>
+            <div class="post-date">2021-02-22</div>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h4 id="模拟赛题解集合">模拟赛题解集合</h4>
+            <div class="post-content" v-pre>
+              <h4 id="模拟赛题解集合">模拟赛题解集合</h4>
 <h5 id="auoj2-天才数学少女">auoj2 天才数学少女</h5>
 <h6 id="problem">Problem</h6>
 <p>有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi></mrow><annotation encoding="application/x-tex">q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span></span></span></span> 组询问，每次给定 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">a,p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">p</span></span></span></span> ，求一个在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>[</mo><mn>0</mn><mo separator="true">,</mo><mn>2</mn><mo>×</mo><mn>1</mn><msup><mn>0</mn><mn>18</mn></msup><mo>]</mo></mrow><annotation encoding="application/x-tex">[0,2\times 10^{18}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">8</span></span></span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span> 的正整数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span> ,使得 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>a</mi><mi>n</mi></msup><mo>≡</mo><mi>n</mi><mo>(</mo><mtext> </mtext><mrow><mi mathvariant="normal">m</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">d</mi></mrow><mtext> </mtext><mi>p</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">a^n\equiv n(\bmod p)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mspace" style="margin-right:0.05555555555555555em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">m</span><span class="mord mathrm">o</span><span class="mord mathrm">d</span></span></span><span class="mspace" style="margin-right:0.05555555555555555em;"></span><span class="mord mathdefault">p</span><span class="mclose">)</span></span></span></span> ,输出任意一个解或输出无解</p>
@@ -11152,999 +11158,45 @@ int main()
 }
 </code></pre>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E6%A8%A1%E6%8B%9F%E8%B5%9B%E9%A2%98%E8%A7%A3%E9%9B%86%E5%90%88">模拟赛题解集合</a>
-<ul>
-<li><a href="#auoj2-%E5%A4%A9%E6%89%8D%E6%95%B0%E5%AD%A6%E5%B0%91%E5%A5%B3">auoj2 天才数学少女</a>
-<ul>
-<li><a href="#problem">Problem</a></li>
-<li><a href="#sol">Sol</a></li>
-<li><a href="#code">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj3-fake">auoj3 fake</a>
-<ul>
-<li><a href="#problem-2">Problem</a></li>
-<li><a href="#sol-2">Sol</a></li>
-<li><a href="#code-2">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj4-%E7%BB%B0%E7%BB%B0%E6%9C%89%E4%BD%99">auoj4 绰绰有余</a>
-<ul>
-<li><a href="#problem-3">Problem</a></li>
-<li><a href="#sol-3">Sol</a></li>
-<li><a href="#code-3">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj5-magnolia">auoj5 Magnolia</a>
-<ul>
-<li><a href="#problem-4">Problem</a></li>
-<li><a href="#sol-4">Sol</a></li>
-<li><a href="#code-4">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj6-myosotis">auoj6 Myosotis</a>
-<ul>
-<li><a href="#problem-5">Problem</a></li>
-<li><a href="#sol-5">Sol</a></li>
-<li><a href="#code-5">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj8-%E9%AD%94%E7%8E%8B%E7%9A%84%E8%A1%8C%E5%BE%84">auoj8 魔王的行径</a>
-<ul>
-<li><a href="#problem-6">Problem</a></li>
-<li><a href="#sol-6">Sol</a></li>
-<li><a href="#code-6">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj10-%E6%B2%A1%E6%9C%89%E4%BA%BA%E5%8F%97%E4%BC%A4%E7%9A%84%E4%B8%96%E7%95%8C">auoj10 没有人受伤的世界</a>
-<ul>
-<li><a href="#problem-7">Problem</a></li>
-<li><a href="#sol-7">Sol</a></li>
-<li><a href="#code-7">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj11-%E5%BA%9F%E5%A2%9F">auoj11 废墟</a>
-<ul>
-<li><a href="#problem-8">Problem</a></li>
-<li><a href="#sol-8">Sol</a></li>
-<li><a href="#code-8">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj12-%E9%AD%94%E6%B3%95">auoj12 魔法</a>
-<ul>
-<li><a href="#problem-9">Problem</a></li>
-<li><a href="#sol-9">Sol</a></li>
-<li><a href="#code-9">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj13-%E9%A3%8E%E6%9A%B4">auoj13 风暴</a>
-<ul>
-<li><a href="#problem-10">Problem</a></li>
-<li><a href="#sol-10">Sol</a></li>
-<li><a href="#code-10">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj14-%E6%9C%AA%E6%9D%A5">auoj14 未来</a>
-<ul>
-<li><a href="#problem-11">Problem</a></li>
-<li><a href="#sol-11">Sol</a></li>
-<li><a href="#code-11">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj15-%E5%B9%B8%E8%BF%90">auoj15 幸运</a>
-<ul>
-<li><a href="#problem-12">Problem</a></li>
-<li><a href="#sol-12">Sol</a></li>
-<li><a href="#code-12">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj17-%E5%B0%8Fb%E7%9A%84%E6%A3%8B%E7%9B%98">auoj17 小B的棋盘</a>
-<ul>
-<li><a href="#problem-13">Problem</a></li>
-<li><a href="#sol-13">Sol</a></li>
-<li><a href="#code-13">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj18-%E5%B0%8Fb%E7%9A%84%E5%A4%8F%E4%BB%A4%E8%90%A5">auoj18 小B的夏令营</a></li>
-<li><a href="#auoj19-%E5%B0%8Fb%E7%9A%84%E5%9B%BE">auoj19 小B的图</a>
-<ul>
-<li><a href="#problem-14">Problem</a></li>
-<li><a href="#sol-14">Sol</a></li>
-<li><a href="#code-14">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj20-permutation">auoj20 Permutation</a></li>
-<li><a href="#auoj21-lcm-game">auoj21 LCM Game</a></li>
-<li><a href="#auoj22-easy-data-structure">auoj22 Easy Data Structure</a></li>
-<li><a href="#auoj23-%E6%A0%91%E4%B8%8E%E8%B7%AF%E5%BE%84">auoj23 树与路径</a></li>
-<li><a href="#auoj24-%E6%A0%91%E6%8D%AE%E7%BB%93%E6%9E%84">auoj24 树据结构</a>
-<ul>
-<li><a href="#problem-15">Problem</a></li>
-<li><a href="#sol-15">Sol</a></li>
-<li><a href="#code-15">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj25-%E6%A0%91%E4%B8%8A%E7%9A%84%E6%95%B0">auoj25 树上的数</a></li>
-<li><a href="#auoj29-endemic">auoj29 endemic</a>
-<ul>
-<li><a href="#probiem">Probiem</a></li>
-<li><a href="#sol-16">Sol</a></li>
-<li><a href="#code-16">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj30-epidemic">auoj30 epidemic</a>
-<ul>
-<li><a href="#problem-16">Problem</a></li>
-<li><a href="#sol-17">Sol</a></li>
-<li><a href="#code-17">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj31-pandemic">auoj31 pandemic</a>
-<ul>
-<li><a href="#problem-17">Problem</a></li>
-<li><a href="#sol-18">Sol</a></li>
-<li><a href="#code-18">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj32-%E9%AB%98%E7%B2%BE%E5%BA%A6">auoj32 高精度</a>
-<ul>
-<li><a href="#problem-18">Problem</a></li>
-<li><a href="#sol-19">Sol</a></li>
-<li><a href="#code-19">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj33-%E6%9C%80%E7%9F%AD%E8%B7%AF">auoj33 最短路</a>
-<ul>
-<li><a href="#problem-19">Problem</a></li>
-<li><a href="#sol-20">Sol</a></li>
-<li><a href="#code-20">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj34-%E7%BD%91%E6%A0%BC%E5%9B%BE">auoj34 网格图</a>
-<ul>
-<li><a href="#problem-20">Problem</a></li>
-<li><a href="#sol-21">Sol</a></li>
-<li><a href="#code-21">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj35-%E5%B0%8Fw%E6%95%B0%E6%8E%92%E5%88%97">auoj35 小W数排列</a>
-<ul>
-<li><a href="#problem-21">Problem</a></li>
-<li><a href="#sol-22">Sol</a></li>
-<li><a href="#code-22">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj36-%E5%B0%8Fw%E7%8E%A9%E6%B8%B8%E6%88%8F">auoj36 小W玩游戏</a>
-<ul>
-<li><a href="#problem-22">Problem</a></li>
-<li><a href="#sol-23">Sol</a></li>
-<li><a href="#code-23">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj37-%E5%B0%8Fw%E7%BB%B4%E6%8A%A4%E5%BA%8F%E5%88%97">auoj37 小W维护序列</a>
-<ul>
-<li><a href="#problem-23">Problem</a></li>
-<li><a href="#sol-24">Sol</a></li>
-<li><a href="#code-24">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj38-%E5%B0%8Fd%E7%9A%84%E5%A5%B6%E7%89%9B">auoj38 小D的奶牛</a>
-<ul>
-<li><a href="#problem-24">Problem</a></li>
-<li><a href="#sol-25">Sol</a></li>
-<li><a href="#code-25">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj39-%E5%B0%8Fd%E7%9A%84%E4%BA%A4%E9%80%9A">auoj39 小D的交通</a>
-<ul>
-<li><a href="#problem-25">Problem</a></li>
-<li><a href="#sol-26">Sol</a></li>
-<li><a href="#code-26">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj40-n%E9%97%A8%E9%97%AE%E9%A2%98">auoj40 N门问题</a>
-<ul>
-<li><a href="#problem-26">Problem</a></li>
-<li><a href="#sol-27">Sol</a></li>
-<li><a href="#code-27">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj41-%E9%92%A9%E5%AD%90">auoj41 钩子</a>
-<ul>
-<li><a href="#problem-27">Problem</a></li>
-<li><a href="#sol-28">Sol</a></li>
-<li><a href="#code-28">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj44-%E7%9F%A9%E9%98%B5%E6%B1%82%E5%92%8C">auoj44 矩阵求和</a>
-<ul>
-<li><a href="#problem-28">Problem</a></li>
-<li><a href="#sol-29">Sol</a></li>
-<li><a href="#code-29">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj45-%E8%A5%BF%E8%A1%8C%E5%AF%BA%E6%97%A0%E4%BD%99%E6%B6%85%E6%A7%83">auoj45 西行寺无余涅槃</a>
-<ul>
-<li><a href="#problem-29">Problem</a></li>
-<li><a href="#sol-30">Sol</a></li>
-<li><a href="#code-30">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj46-%E9%B1%BC%E8%B4%AF%E8%80%8C%E5%85%A5">auoj46 鱼贯而入</a>
-<ul>
-<li><a href="#problem-30">Problem</a></li>
-<li><a href="#sol-31">Sol</a></li>
-<li><a href="#code-31">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj47-%E5%90%8C%E6%A1%8C%E4%B8%8E%E5%AE%A4%E5%8F%8B">auoj47 同桌与室友</a>
-<ul>
-<li><a href="#problem-31">Problem</a></li>
-<li><a href="#sol-32">Sol</a></li>
-<li><a href="#code-32">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj48-%E4%BC%A0%E9%80%81">auoj48 传送</a>
-<ul>
-<li><a href="#problem-32">Problem</a></li>
-<li><a href="#sol-33">Sol</a></li>
-<li><a href="#code-33">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj49-%E7%94%9F%E6%88%90%E6%A0%91">auoj49 生成树</a>
-<ul>
-<li><a href="#problem-33">Problem</a></li>
-<li><a href="#sol-34">Sol</a></li>
-<li><a href="#code-34">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj50-%E7%AE%80%E5%8D%95%E6%95%B0%E5%AD%A6%E9%A2%98">auoj50 简单数学题</a>
-<ul>
-<li><a href="#problem-34">Problem</a></li>
-<li><a href="#sol-35">Sol</a></li>
-<li><a href="#code-35">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj56-seed">auoj56 seed</a>
-<ul>
-<li><a href="#problem-35">Problem</a></li>
-<li><a href="#sol-36">Sol</a></li>
-<li><a href="#code-36">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj57-string">auoj57 string</a>
-<ul>
-<li><a href="#problem-36">Problem</a></li>
-<li><a href="#sol-37">Sol</a></li>
-<li><a href="#code-37">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj58-tree">auoj58 tree</a>
-<ul>
-<li><a href="#problem-37">Problem</a></li>
-<li><a href="#sol-38">Sol</a></li>
-<li><a href="#code-38">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj62-string">auoj62 string</a>
-<ul>
-<li><a href="#problem-38">Problem</a></li>
-<li><a href="#sol-39">Sol</a></li>
-<li><a href="#code-39">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj63-tree">auoj63 tree</a>
-<ul>
-<li><a href="#problem-39">Problem</a></li>
-<li><a href="#sol-40">Sol</a></li>
-<li><a href="#code-40">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj64-sort">auoj64 sort</a>
-<ul>
-<li><a href="#problem-40">Problem</a></li>
-<li><a href="#sol-41">Sol</a></li>
-<li><a href="#code-41">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj65-%E5%B0%8Fb%E7%9A%84%E7%8F%AD%E7%BA%A7">auoj65 小B的班级</a>
-<ul>
-<li><a href="#problem-41">Problem</a></li>
-<li><a href="#sol-42">Sol</a></li>
-<li><a href="#code-42">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj66-%E5%B0%8Fb%E7%9A%84%E7%8E%AF">auoj66 小B的环</a>
-<ul>
-<li><a href="#problem-42">Problem</a></li>
-<li><a href="#sol-43">Sol</a></li>
-<li><a href="#code-43">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj68-%E9%AA%A8%E7%81%B0">auoj68 骨灰</a>
-<ul>
-<li><a href="#problem-43">Problem</a></li>
-<li><a href="#sol-44">Sol</a></li>
-<li><a href="#code-44">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj69-%E6%99%BA%E5%AD%90">auoj69 智子</a>
-<ul>
-<li><a href="#problem-44">Problem</a></li>
-<li><a href="#sol-45">Sol</a></li>
-<li><a href="#code-45">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj70-%E5%A2%93%E5%9C%B0">auoj70 墓地</a>
-<ul>
-<li><a href="#problem-45">Problem</a></li>
-<li><a href="#sol-46">Sol</a></li>
-<li><a href="#code-46">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj77-three">auoj77 Three</a>
-<ul>
-<li><a href="#problem-46">Problem</a></li>
-<li><a href="#sol-47">Sol</a></li>
-<li><a href="#code-47">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj78-seat">auoj78 Seat</a>
-<ul>
-<li><a href="#problem-47">Problem</a></li>
-<li><a href="#sol-48">Sol</a></li>
-<li><a href="#code-48">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj83-%E8%8F%B1%E5%BD%A2">auoj83 菱形</a>
-<ul>
-<li><a href="#problem-48">Problem</a></li>
-<li><a href="#sol-49">Sol</a></li>
-<li><a href="#code-49">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj84-%E6%AD%A3%E6%96%B9%E5%BD%A2">auoj84 正方形</a>
-<ul>
-<li><a href="#problem-49">Problem</a></li>
-<li><a href="#sol-50">Sol</a></li>
-<li><a href="#code-50">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj85-%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91">auoj85 最小生成树</a>
-<ul>
-<li><a href="#problem-50">Problem</a></li>
-<li><a href="#sol-51">Sol</a></li>
-<li><a href="#code-51">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj86-lowbit">auoj86 lowbit</a>
-<ul>
-<li><a href="#problem-51">Problem</a></li>
-<li><a href="#sol-52">Sol</a></li>
-<li><a href="#code-52">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj87-sequence">auoj87 sequence</a>
-<ul>
-<li><a href="#problem-52">Problem</a></li>
-<li><a href="#sol-53">Sol</a></li>
-<li><a href="#code-53">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj88-classroom">auoj88 classroom</a>
-<ul>
-<li><a href="#problem-53">Problem</a></li>
-<li><a href="#sol-54">Sol</a></li>
-<li><a href="#code-54">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj89-%E9%B1%BC%E6%AD%BB%E7%BD%91%E7%A0%B4">auoj89 鱼死网破</a>
-<ul>
-<li><a href="#problem-54">Problem</a></li>
-<li><a href="#sol-55">Sol</a></li>
-<li><a href="#code-55">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj90-%E6%BC%8F%E7%BD%91%E4%B9%8B%E9%B1%BC">auoj90 漏网之鱼</a>
-<ul>
-<li><a href="#problem-55">Problem</a></li>
-<li><a href="#sol-56">Sol</a></li>
-<li><a href="#code-56">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj91-%E6%B5%91%E6%B0%B4%E6%91%B8%E9%B1%BC">auoj91 浑水摸鱼</a>
-<ul>
-<li><a href="#problem-56">Problem</a></li>
-<li><a href="#sol-57">Sol</a></li>
-<li><a href="#code-57">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj92-%E5%BA%8F%E5%88%97">auoj92 序列</a>
-<ul>
-<li><a href="#problem-57">Problem</a></li>
-<li><a href="#sol-58">Sol</a></li>
-<li><a href="#code-58">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj93-%E5%B0%8Fz%E7%9A%84%E6%A0%91">auoj93 小Z的树</a>
-<ul>
-<li><a href="#problem-58">Problem</a></li>
-<li><a href="#sol-59">Sol</a></li>
-<li><a href="#code-59">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj94-%E5%B0%8Fy%E7%9A%84%E5%9B%BE">auoj94 小Y的图</a>
-<ul>
-<li><a href="#problem-59">Problem</a></li>
-<li><a href="#sol-60">Sol</a></li>
-<li><a href="#code-60">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">auoj95 数据结构</a>
-<ul>
-<li><a href="#problem-60">Problem</a></li>
-<li><a href="#sol-61">Sol</a></li>
-<li><a href="#code-61">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj96-%E4%B8%89%E5%9B%BD%E5%AD%A6%E8%80%85">auoj96 三国学者</a>
-<ul>
-<li><a href="#problem-61">Problem</a></li>
-<li><a href="#sol-62">Sol</a></li>
-<li><a href="#code-62">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj98-zsy%E5%AE%B6%E4%BB%8A%E5%A4%A9%E7%9A%84%E9%A5%AD">auoj98 ZSY家今天的饭</a>
-<ul>
-<li><a href="#problem-62">Problem</a></li>
-<li><a href="#sol-63">Sol</a></li>
-<li><a href="#code-63">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj101-%E9%BC%A0">auoj101 鼠</a>
-<ul>
-<li><a href="#problem-63">Problem</a></li>
-<li><a href="#sol-64">Sol</a></li>
-<li><a href="#code-64">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj102-arcahv">auoj102 Arcahv</a>
-<ul>
-<li><a href="#problem-64">Problem</a></li>
-<li><a href="#sol-65">Sol</a></li>
-<li><a href="#code-65">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj104-number">auoj104 Number</a></li>
-<li><a href="#auoj105-module">auoj105 Module</a></li>
-<li><a href="#auoj106-robot">auoj106 Robot</a></li>
-<li><a href="#auoj-107-%E6%9F%A5%E6%8B%89%E5%9B%BE%E6%96%AF%E7%89%B9%E6%8B%89%E5%A6%82%E6%98%AF%E8%AF%B4">auoj 107 查拉图斯特拉如是说</a>
-<ul>
-<li><a href="#problem-65">Problem</a></li>
-<li><a href="#sol-66">Sol</a></li>
-<li><a href="#code-66">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj108-%E6%A9%A1%E6%A0%91%E4%B8%8A%E7%9A%84%E9%80%83%E4%BA%A1">auoj108 橡树上的逃亡</a>
-<ul>
-<li><a href="#problem-66">Problem</a></li>
-<li><a href="#sol-67">Sol</a></li>
-<li><a href="#code-67">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj110-%E7%9F%A9%E9%98%B5">auoj110 矩阵</a>
-<ul>
-<li><a href="#problem-67">Problem</a></li>
-<li><a href="#sol-68">Sol</a></li>
-<li><a href="#code-68">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj112-%E5%90%91%E9%87%8F">auoj112 向量</a>
-<ul>
-<li><a href="#problem-68">Problem</a></li>
-<li><a href="#sol-69">Sol</a></li>
-<li><a href="#code-69">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj117-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F">auoj117 随机变量</a>
-<ul>
-<li><a href="#problem-69">Problem</a></li>
-<li><a href="#sol-70">Sol</a></li>
-<li><a href="#code-70">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj118-%E4%B8%A4%E4%B8%AA%E6%95%B4%E6%95%B0">auoj118 两个整数</a>
-<ul>
-<li><a href="#problem-70">Problem</a></li>
-<li><a href="#sol-71">Sol</a></li>
-<li><a href="#code-71">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj120-%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0">auoj120 最大公约数</a>
-<ul>
-<li><a href="#problem-71">Problem</a></li>
-<li><a href="#sol-72">Sol</a></li>
-<li><a href="#code-72">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj121-%E5%87%B8%E5%8C%85%E7%9A%84%E4%BB%B7%E5%80%BC">auoj121 凸包的价值</a>
-<ul>
-<li><a href="#problem-72">Problem</a></li>
-<li><a href="#sol-73">Sol</a></li>
-<li><a href="#code-73">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj122-%E4%BA%A4%E9%80%9A%E7%BD%91%E7%BB%9C">auoj122 交通网络</a>
-<ul>
-<li><a href="#problem-73">Problem</a></li>
-<li><a href="#sol-74">Sol</a></li>
-<li><a href="#code-74">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj123-%E5%80%BE%E5%B0%BD%E5%A4%A9%E4%B8%8B">auoj123 倾尽天下</a>
-<ul>
-<li><a href="#problem-74">Problem</a></li>
-<li><a href="#sol-75">Sol</a></li>
-<li><a href="#code-75">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj124-%E6%98%A5%E9%A3%8E%E4%B8%80%E9%A1%BE">auoj124 春风一顾</a></li>
-<li><a href="#auoj149-%E7%AC%AC%E4%B8%80%E9%A2%98">auoj149 第一题</a>
-<ul>
-<li><a href="#problem-75">Problem</a></li>
-<li><a href="#sol-76">Sol</a></li>
-<li><a href="#code-76">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj150-%E7%AC%AC%E4%BA%8C%E9%A2%98">auoj150 第二题</a>
-<ul>
-<li><a href="#problem-76">Problem</a></li>
-<li><a href="#sol-77">Sol</a></li>
-<li><a href="#code-77">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj151-%E7%AC%AC%E4%B8%89%E9%A2%98">auoj151 第三题</a>
-<ul>
-<li><a href="#problem-77">Problem</a></li>
-<li><a href="#sol-78">Sol</a></li>
-<li><a href="#code-78">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj402-b">auoj402 B</a>
-<ul>
-<li><a href="#problem-78">Problem</a></li>
-<li><a href="#sol-79">Sol</a></li>
-<li><a href="#code-79">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj403-c">auoj403 C</a>
-<ul>
-<li><a href="#problem-79">Problem</a></li>
-<li><a href="#sol-80">Sol</a></li>
-<li><a href="#code-80">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj404-%E6%94%BE%E9%80%81%E4%BA%8B%E6%95%85">auoj404 放送事故</a>
-<ul>
-<li><a href="#problem-80">Problem</a></li>
-<li><a href="#sol-81">Sol</a></li>
-<li><a href="#code-81">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj405-%E5%9C%A3%E7%BB%8F%E5%92%8F%E5%94%B1">auoj405 圣经咏唱</a>
-<ul>
-<li><a href="#problem-81">Problem</a></li>
-<li><a href="#sol-82">Sol</a></li>
-<li><a href="#code-82">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj407-mst">auoj407 mst</a>
-<ul>
-<li><a href="#problem-82">Problem</a></li>
-<li><a href="#sol-83">Sol</a></li>
-<li><a href="#code-83">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj408-string">auoj408 string</a>
-<ul>
-<li><a href="#problem-83">Problem</a></li>
-<li><a href="#sol-84">Sol</a></li>
-<li><a href="#code-84">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj411-sequence">auoj411 sequence</a>
-<ul>
-<li><a href="#problem-84">Problem</a></li>
-<li><a href="#sol-85">Sol</a></li>
-<li><a href="#code-85">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj413-%E6%B8%B8%E8%B5%B0">auoj413 游走</a>
-<ul>
-<li><a href="#problem-85">Problem</a></li>
-<li><a href="#sol-86">Sol</a></li>
-<li><a href="#code-86">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj414-s1mple%E7%9A%84%E7%9F%A9%E9%98%B5">auoj414 s1mple的矩阵</a>
-<ul>
-<li><a href="#problem-86">Problem</a></li>
-<li><a href="#sol-87">Sol</a></li>
-<li><a href="#code-87">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj416-s3mple%E7%9A%84%E6%8E%92%E5%88%97">auoj416 s3mple的排列</a>
-<ul>
-<li><a href="#problem-87">Problem</a></li>
-<li><a href="#sol-88">Sol</a></li>
-<li><a href="#code-88">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj417-%E6%9E%81%E4%B9%90%E8%BF%AA%E6%96%AF%E7%A7%91">auoj417 极乐迪斯科</a>
-<ul>
-<li><a href="#problem-88">Problem</a></li>
-<li><a href="#sol-89">Sol</a></li>
-<li><a href="#code-89">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj418-%E5%8F%8D%E8%AE%BD">auoj418 反讽</a>
-<ul>
-<li><a href="#problem-89">Problem</a></li>
-<li><a href="#sol-90">Sol</a></li>
-<li><a href="#code-90">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj419-%E6%95%8F%E6%84%9F%E8%AF%8D">auoj419 敏感词</a>
-<ul>
-<li><a href="#problem-90">Problem</a></li>
-<li><a href="#sol-91">Sol</a></li>
-<li><a href="#code-91">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj420-arcahv">auoj420 Arcahv</a>
-<ul>
-<li><a href="#problem-91">Problem</a></li>
-<li><a href="#sol-92">Sol</a></li>
-<li><a href="#code-92">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj421-tempestissimo">auoj421 Tempestissimo</a>
-<ul>
-<li><a href="#problem-92">Problem</a></li>
-<li><a href="#sol-93">Sol</a></li>
-<li><a href="#code-93">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj422-%E7%94%9F%E6%88%90%E6%97%A0%E5%90%91%E5%9B%BE">auoj422 生成无向图</a>
-<ul>
-<li><a href="#problem-93">Problem</a></li>
-<li><a href="#sol-94">Sol</a></li>
-<li><a href="#code-94">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj424-qiqi20021026-%E7%9A%84-t1">auoj424 qiqi20021026 的 T1</a>
-<ul>
-<li><a href="#problem-94">Problem</a></li>
-<li><a href="#sol-95">Sol</a></li>
-<li><a href="#code-95">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj425-xuanyiming-%E7%9A%84-t2">auoj425 xuanyiming 的 T2</a>
-<ul>
-<li><a href="#problem-95">Problem</a></li>
-<li><a href="#sol-96">Sol</a></li>
-<li><a href="#code-96">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj426-daklqw-%E7%9A%84-t3">auoj426 daklqw 的 T3</a>
-<ul>
-<li><a href="#problem-96">Problem</a></li>
-<li><a href="#sol-97">Sol</a></li>
-<li><a href="#code-97">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj427-%E5%BC%82%E6%88%96%E6%A0%91">auoj427 异或树</a>
-<ul>
-<li><a href="#problem-97">Problem</a></li>
-<li><a href="#sol-98">Sol</a></li>
-<li><a href="#code-98">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj428-%E5%AF%86%E7%A0%81">auoj428 密码</a>
-<ul>
-<li><a href="#problem-98">Problem</a></li>
-<li><a href="#sol-99">Sol</a></li>
-<li><a href="#code-99">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj429-%E6%8E%92%E5%88%97">auoj429 排列</a>
-<ul>
-<li><a href="#problem-99">Problem</a></li>
-<li><a href="#sol-100">Sol</a></li>
-<li><a href="#code-100">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj431-%E4%B8%A4%E4%BA%BA%E8%B7%9D%E7%A6%BB%E7%9A%84%E6%A6%82%E7%AE%97">auoj431 两人距离的概算</a>
-<ul>
-<li><a href="#problem-100">Problem</a></li>
-<li><a href="#sol-101">Sol</a></li>
-<li><a href="#code-101">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj460-%E6%97%A0%E6%A0%B9%E6%A0%91">auoj460 无根树</a>
-<ul>
-<li><a href="#problem-101">Problem</a></li>
-<li><a href="#sol-102">Sol</a></li>
-<li><a href="#code-102">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj461-%E6%95%B0%E5%88%97">auoj461 数列</a>
-<ul>
-<li><a href="#problem-102">Problem</a></li>
-<li><a href="#sol-103">Sol</a></li>
-<li><a href="#code-103">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj471-%E5%92%95">auoj471 咕</a>
-<ul>
-<li><a href="#problem-103">Problem</a></li>
-<li><a href="#sol-104">Sol</a></li>
-<li><a href="#code-104">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj472-%E5%87%8B%E6%9C%B1%E9%A2%9C">auoj472 凋朱颜</a>
-<ul>
-<li><a href="#problem-104">Problem</a></li>
-<li><a href="#sol-105">Sol</a></li>
-<li><a href="#code-105">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj473-%E7%AE%80%E5%8D%95%E9%A2%98">auoj473 简单题</a>
-<ul>
-<li><a href="#problem-105">Problem</a></li>
-<li><a href="#sol-106">Sol</a></li>
-<li><a href="#code-106">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj474-%E6%B0%94%E8%B1%A1%E5%AD%A6">auoj474 气象学</a>
-<ul>
-<li><a href="#problem-106">Problem</a></li>
-<li><a href="#sol-107">Sol</a></li>
-<li><a href="#code-107">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj475-%E5%B7%B4%E5%A1%9E%E7%BD%97%E9%82%A3">auoj475 巴塞罗那</a>
-<ul>
-<li><a href="#problem-107">Problem</a></li>
-<li><a href="#sol-108">Sol</a></li>
-<li><a href="#code-108">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj476-%E9%87%8D%E6%98%A0%E5%B0%84">auoj476 重映射</a>
-<ul>
-<li><a href="#problem-108">Problem</a></li>
-<li><a href="#sol-109">Sol</a></li>
-<li><a href="#code-109">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj477-%E6%B8%85%E7%90%86%E9%80%9A%E9%81%93">auoj477 清理通道</a>
-<ul>
-<li><a href="#problem-109">Problem</a></li>
-<li><a href="#sol-110">Sol</a></li>
-<li><a href="#code-110">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj478-%E7%A0%B0%E7%A0%B0%E5%8D%9A%E5%A3%AB">auoj478 砰砰博士</a>
-<ul>
-<li><a href="#problem-110">Problem</a></li>
-<li><a href="#sol-111">Sol</a></li>
-<li><a href="#code-111">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj479-%E6%80%AA%E7%9B%97%E4%B9%8B%E7%BF%BC">auoj479 怪盗之翼</a>
-<ul>
-<li><a href="#problem-111">Problem</a></li>
-<li><a href="#sol-112">Sol</a></li>
-<li><a href="#code-112">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj480-%E9%BB%91%E7%99%BD%E6%B2%99%E6%BC%A0">auoj480 黑白沙漠</a>
-<ul>
-<li><a href="#problem-112">Problem</a></li>
-<li><a href="#sol-113">Sol</a></li>
-<li><a href="#code-113">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj481-%E8%8D%92%E9%87%8E%E8%81%9A%E9%A4%90">auoj481 荒野聚餐</a>
-<ul>
-<li><a href="#problem-113">Problem</a></li>
-<li><a href="#sol-114">Sol</a></li>
-<li><a href="#code-114">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj482-%E7%81%AB%E6%98%9F%E5%9C%A8%E4%BD%8F">auoj482 火星在住</a>
-<ul>
-<li><a href="#problem-114">Problem</a></li>
-<li><a href="#sol-115">Sol</a></li>
-<li><a href="#code-115">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj818-%E9%94%81">auoj818 锁</a>
-<ul>
-<li><a href="#problem-115">Problem</a></li>
-<li><a href="#sol-116">Sol</a></li>
-<li><a href="#code-116">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj819-bwt">auoj819 bwt</a>
-<ul>
-<li><a href="#problem-116">Problem</a></li>
-<li><a href="#sol-117">Sol</a></li>
-<li><a href="#code-117">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj820-robot">auoj820 robot</a>
-<ul>
-<li><a href="#problem-117">Problem</a></li>
-<li><a href="#sol-118">Sol</a></li>
-<li><a href="#code-118">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj821-%E7%99%BD%E9%B1%BC%E8%B5%A4%E4%B9%8C">auoj821 白鱼赤乌</a>
-<ul>
-<li><a href="#problem-118">Problem</a></li>
-<li><a href="#sol-119">Sol</a></li>
-<li><a href="#code-119">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj823-%E9%B2%81%E9%B1%BC%E9%99%B6%E9%98%B4">auoj823 鲁鱼陶阴</a>
-<ul>
-<li><a href="#problem-119">Problem</a></li>
-<li><a href="#sol-120">Sol</a></li>
-<li><a href="#code-120">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj825-%E7%9A%AE%E5%8D%A1%E4%B8%98">auoj825 ⽪卡丘</a>
-<ul>
-<li><a href="#problem-120">Problem</a></li>
-<li><a href="#sol-121">Sol</a></li>
-<li><a href="#code-121">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj826-%E6%88%91%E6%B0%B8%E8%BF%9C%E5%96%9C%E6%AC%A2">auoj826 我永远喜欢</a>
-<ul>
-<li><a href="#problem-121">Problem</a></li>
-<li><a href="#sol-122">Sol</a></li>
-<li><a href="#code-122">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj827-%E6%9C%89%E5%90%91%E6%97%A0%E7%8E%AF%E5%9B%BE">auoj827 有向无环图</a>
-<ul>
-<li><a href="#problem-122">Problem</a></li>
-<li><a href="#sol-123">Sol</a></li>
-<li><a href="#code-123">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj828-%E5%BA%8F%E5%88%97">auoj828 序列</a>
-<ul>
-<li><a href="#problem-123">Problem</a></li>
-<li><a href="#sol-124">Sol</a></li>
-<li><a href="#code-124">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj829-%E5%9B%9E%E6%96%87%E4%B8%B2">auoj829 回文串</a>
-<ul>
-<li><a href="#problem-124">Problem</a></li>
-<li><a href="#sol-125">Sol</a></li>
-</ul>
-</li>
-<li><a href="#auoj836-%E8%AE%A1%E6%95%B0">auoj836 计数</a>
-<ul>
-<li><a href="#problem-125">Problem</a></li>
-<li><a href="#sol-126">Sol</a></li>
-<li><a href="#code-125">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj837-%E5%8D%9A%E5%BC%88">auoj837 博弈</a>
-<ul>
-<li><a href="#problem-126">Problem</a></li>
-<li><a href="#sol-127">Sol</a></li>
-<li><a href="#code-126">Code</a></li>
-</ul>
-</li>
-<li><a href="#auoj838-%E5%88%92%E5%88%86">auoj838 划分</a>
-<ul>
-<li><a href="#problem-127">Problem</a></li>
-<li><a href="#sol-128">Sol</a></li>
-<li><a href="#code-127">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-              </div>
             </div>
-          </article>
-        </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://4182543731.github.io/post/noi-2019-problem/">
+                  <h3 class="post-title">
+                    NOI 2019 之前的部分题目题解集合
+                  </h3>
+                </a>
+              </div>
+            
 
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://4182543731.github.io/post/noi-2019-problem/">
-              <h3 class="post-title">
-                NOI 2019 之前的部分题目题解集合
-              </h3>
-            </a>
+            
+
           </div>
-        
 
-        
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://4182543731.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
+        </div>
       </div>
     </div>
 
-    <script>
-      hljs.initHighlightingOnLoad()
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+AOS.init();
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
+</script>
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
+
+
+
   </body>
 </html>

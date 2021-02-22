@@ -1,13 +1,20 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>ZROI 部分题目题解集合 | 4182_543_731`s blog</title>
-<link rel="shortcut icon" href="https://4182543731.github.io/favicon.ico?v=1614004230923">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://4182543731.github.io/favicon.ico?v=1614004329548">
 <link rel="stylesheet" href="https://4182543731.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="ZROI 部分题目题解集合 | 4182_543_731`s blog - Atom Feed" href="https://4182543731.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
@@ -21,82 +28,81 @@ T1 选拔赛
 Problem
 有 nnn 个人参..." />
     <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://4182543731.github.io">
-  <img class="avatar" src="https://4182543731.github.io/images/avatar.png?v=1614004230923" alt="">
-  </a>
-  <h1 class="site-title">
-    4182_543_731`s blog
-  </h1>
-  <p class="site-description">
-    您 您 您 您
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://4182543731.github.io">
+        <img src="https://4182543731.github.io/images/avatar.png?v=1614004329548" class="site-logo">
+        <h1 class="site-title">4182_543_731`s blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="/" class="menu">
-          首页
-        </a>
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
       
-        <a href="/archives" class="menu">
-          归档
-        </a>
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
       
-    
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
       
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
+      
+    </div>
+    <div class="site-description">
+      您 您 您 您
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://4182543731.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              ZROI 部分题目题解集合
-            </h2>
-            <div class="post-info">
-              <span>
-                2021-02-22
-              </span>
-              <span>
-                374 min read
-              </span>
-              
-            </div>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">ZROI 部分题目题解集合</h2>
+            <div class="post-date">2021-02-22</div>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h3 id="zroi2020-部分题目总结">ZROI2020 部分题目总结</h3>
+            <div class="post-content" v-pre>
+              <h3 id="zroi2020-部分题目总结">ZROI2020 部分题目总结</h3>
 <h6 id="前言">前言</h6>
 <p>暂时只有我打过的场</p>
 <p>目前咕咕咕的：十连测 day 1 day 5 day 7 三月集训 day 3</p>
@@ -5852,611 +5858,45 @@ int main()
 </code></pre>
 <p><s>完结撒花</s></p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#zroi2020-%E9%83%A8%E5%88%86%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93">ZROI2020 部分题目总结</a><br>
-*<br>
-*<br>
-* <a href="#%E5%89%8D%E8%A8%80">前言</a>
-<ul>
-<li><a href="#%E5%8D%81%E8%BF%9E%E6%B5%8B-day-2">十连测 day 2</a>
-<ul>
-<li><a href="#t1-%E9%80%89%E6%8B%94%E8%B5%9B">T1 选拔赛</a>
-<ul>
-<li><a href="#problem">Problem</a></li>
-<li><a href="#sol">Sol</a></li>
-<li><a href="#code">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-bitrev">T2 bitrev</a>
-<ul>
-<li><a href="#problem-2">Problem</a></li>
-<li><a href="#sol-2">Sol</a></li>
-<li><a href="#code-2">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-lca-on-tree">T3 LCA on tree</a>
-<ul>
-<li><a href="#problem-3">Problem</a></li>
-<li><a href="#sol-3">Sol</a></li>
-<li><a href="#code-3">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%8D%81%E8%BF%9E%E6%B5%8B-day-3">十连测 day 3</a>
-<ul>
-<li><a href="#t1-%E9%80%89%E6%8B%94%E8%B5%9B-2">T1 选拔赛</a>
-<ul>
-<li><a href="#problem-4">Problem</a></li>
-<li><a href="#sol-4">Sol</a></li>
-<li><a href="#code-4">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-%E8%B7%B3%E8%B7%83">T2 跳跃</a>
-<ul>
-<li><a href="#problem-5">Problem</a></li>
-<li><a href="#sol-5">Sol</a></li>
-<li><a href="#code-5">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-%E5%88%87%E8%9B%8B%E7%B3%95">T3 切蛋糕</a>
-<ul>
-<li><a href="#problem-6">Problem</a></li>
-<li><a href="#sol-6">Sol</a></li>
-<li><a href="#code-6">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%8D%81%E8%BF%9E%E6%B5%8B-day-4">十连测 day 4</a></li>
-<li><a href="#%E5%8D%81%E8%BF%9E%E6%B5%8B-day-6">十连测 day 6</a>
-<ul>
-<li><a href="#t1-%E7%BD%91%E6%A0%BC">T1 网格</a>
-<ul>
-<li><a href="#problem-7">Problem</a></li>
-<li><a href="#sol-7">Sol</a></li>
-<li><a href="#code-7">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-%E6%8B%8D%E5%8D%96">T2 拍卖</a>
-<ul>
-<li><a href="#problem-8">Problem</a></li>
-<li><a href="#sol-8">Sol</a></li>
-<li><a href="#code-8">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-%E8%BF%B7%E5%AE%AB">T3 迷宫</a>
-<ul>
-<li><a href="#problem-9">Problem</a></li>
-<li><a href="#sol-9">Sol</a></li>
-<li><a href="#code-9">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%8D%81%E8%BF%9E%E6%B5%8B-day-75">十连测 day 7.5</a>
-<ul>
-<li><a href="#t1-trie%E6%A0%91">T1 Trie树</a>
-<ul>
-<li><a href="#problem-10">Problem</a></li>
-<li><a href="#sol-10">Sol</a></li>
-<li><a href="#code-10">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-%E7%8B%AC%E7%AB%8B%E9%9B%86">T2 独立集</a>
-<ul>
-<li><a href="#problem-11">Problem</a></li>
-<li><a href="#sol-11">Sol</a></li>
-<li><a href="#code-11">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">T3 数据结构</a>
-<ul>
-<li><a href="#problem-12">Problem</a></li>
-<li><a href="#sol-12">Sol</a></li>
-<li><a href="#code-12">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%8D%81%E8%BF%9E%E6%B5%8B-day-8">十连测 day 8</a>
-<ul>
-<li><a href="#t1-alienation">T1 Alienation</a>
-<ul>
-<li><a href="#problem-13">Problem</a></li>
-<li><a href="#sol-13">Sol</a></li>
-<li><a href="#code-13">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-antarctica">T2 Antarctica</a>
-<ul>
-<li><a href="#problem-14">Problem</a></li>
-<li><a href="#sol-14">Sol</a></li>
-<li><a href="#code-14">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-aristocrat">T3 Aristocrat</a>
-<ul>
-<li><a href="#problem-15">Problem</a></li>
-<li><a href="#sol-15">Sol</a></li>
-<li><a href="#code-15">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%8D%81%E8%BF%9E%E6%B5%8B-day-9">十连测 Day 9</a>
-<ul>
-<li><a href="#t1-farm-of-monsters">T1 Farm of Monsters</a>
-<ul>
-<li><a href="#problem-16">Problem</a></li>
-<li><a href="#sol-16">Sol</a></li>
-<li><a href="#code-16">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-airplane-cliques">T2 Airplane Cliques</a>
-<ul>
-<li><a href="#problem-17">Problem</a></li>
-<li><a href="#sol-17">Sol</a></li>
-<li><a href="#code-17">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-horrible-circles">T3 Horrible Circles</a>
-<ul>
-<li><a href="#problem-18">Problem</a></li>
-<li><a href="#sol-18">Sol</a></li>
-<li><a href="#code-18">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%8D%81%E8%BF%9E%E6%B5%8B-day-10">十连测 Day 10</a>
-<ul>
-<li><a href="#t1-easy-win">T1 Easy Win</a>
-<ul>
-<li><a href="#problem-19">Problem</a></li>
-<li><a href="#sol-19">Sol</a></li>
-<li><a href="#code-19">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-cells-blocking">T2 Cells Blocking</a></li>
-<li><a href="#t3-giant-penguin">T3 Giant Penguin</a>
-<ul>
-<li><a href="#problem-20">Problem</a></li>
-<li><a href="#sol-20">Sol</a></li>
-<li><a href="#code-20">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%AF%92%E5%81%87%E9%9B%86%E8%AE%AD-day-1">寒假集训 Day 1</a>
-<ul>
-<li><a href="#t1-%E5%9E%83%E5%9C%BE%E9%A2%98">T1 垃圾题</a>
-<ul>
-<li><a href="#problem-21">Problem</a></li>
-<li><a href="#sol-21">Sol</a></li>
-<li><a href="#code-21">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-%E6%95%B0%E8%AE%BA%E9%A2%98">T2 数论题</a>
-<ul>
-<li><a href="#problem-22">Problem</a></li>
-<li><a href="#sol-22">Sol</a></li>
-<li><a href="#code-22">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-%E4%BA%8C%E5%88%86%E9%A2%98">T3 二分题</a>
-<ul>
-<li><a href="#problem-23">Problem</a></li>
-<li><a href="#sol-23">Sol</a></li>
-<li><a href="#code-23">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%AF%92%E5%81%87%E9%9B%86%E8%AE%AD-day-2">寒假集训 Day 2</a>
-<ul>
-<li><a href="#t1-%E6%88%91%E8%A6%81%E6%89%93%E6%95%B0%E8%AE%BA">T1 我要打数论</a>
-<ul>
-<li><a href="#problem-24">Problem</a></li>
-<li><a href="#sol-24">Sol</a></li>
-<li><a href="#code-24">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-%E6%88%91%E8%A6%81%E6%89%93%E7%9F%A9%E5%BD%A2">T2 我要打矩形</a>
-<ul>
-<li><a href="#problem-25">Problem</a></li>
-<li><a href="#sol-25">Sol</a></li>
-<li><a href="#code-25">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-%E6%88%91%E8%A6%80">T3 我覀</a>
-<ul>
-<li><a href="#problem-26">Problem</a></li>
-<li><a href="#sol-26">Sol</a></li>
-<li><a href="#code-26">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%AF%92%E5%81%87%E9%9B%86%E8%AE%AD-day-3">寒假集训 Day 3</a>
-<ul>
-<li><a href="#t1-%E7%82%B9%E5%88%86%E6%B2%BB">T1 点分治</a>
-<ul>
-<li><a href="#problem-27">Problem</a></li>
-<li><a href="#sol-27">Sol</a></li>
-<li><a href="#code-27">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-%E8%BA%AB%E4%BB%BD%E8%AF%81">T2 身份证</a>
-<ul>
-<li><a href="#problem-28">Problem</a></li>
-<li><a href="#sol-28">Sol</a></li>
-<li><a href="#code-28">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-fib%E4%B8%8Egcd">T3 Fib与Gcd</a>
-<ul>
-<li><a href="#problem-29">Problem</a></li>
-<li><a href="#sol-29">Sol</a></li>
-<li><a href="#code-29">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E4%B8%89%E6%9C%88%E9%9B%86%E8%AE%AD-day-1">三月集训 Day 1</a>
-<ul>
-<li><a href="#t1-bitset-master">T1 Bitset Master</a>
-<ul>
-<li><a href="#problem-30">Problem</a></li>
-<li><a href="#sol-30">Sol</a></li>
-<li><a href="#code-30">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-knowledge-oriented-problem">T2 Knowledge-Oriented Problem</a></li>
-<li><a href="#t3-lcm-sum">T3 LCM Sum</a>
-<ul>
-<li><a href="#problem-31">Problem</a></li>
-<li><a href="#sol-31">Sol</a></li>
-<li><a href="#code-31">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E4%B8%89%E6%9C%88%E9%9B%86%E8%AE%AD-day-2">三月集训 Day 2</a>
-<ul>
-<li><a href="#t1-%E8%B0%83%E5%85%B5%E9%81%A3%E5%B0%86">T1 调兵遣将</a>
-<ul>
-<li><a href="#problem-32">Problem</a></li>
-<li><a href="#sol-32">Sol</a></li>
-<li><a href="#code-32">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-%E4%B8%80%E6%8E%B7%E5%8D%83%E9%87%91">T2 一掷千金</a>
-<ul>
-<li><a href="#problem-33">Problem</a></li>
-<li><a href="#sol-33">Sol</a></li>
-<li><a href="#code-33">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-%E6%A0%91%E6%8B%93%E6%89%91%E5%BA%8F">T3 树拓扑序</a>
-<ul>
-<li><a href="#problem-34">Problem</a></li>
-<li><a href="#sol-34">Sol</a></li>
-<li><a href="#code-34">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E4%B8%89%E6%9C%88%E9%9B%86%E8%AE%AD-day-4">三月集训 Day 4</a>
-<ul>
-<li><a href="#t1-manager">T1 Manager</a>
-<ul>
-<li><a href="#problem-35">Problem</a></li>
-<li><a href="#sol-35">Sol</a></li>
-<li><a href="#code-35">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-gcd%E5%86%8D%E6%94%BE%E9%80%81">T2 GCD再放送</a>
-<ul>
-<li><a href="#problem-36">Problem</a></li>
-<li><a href="#sol-36">Sol</a></li>
-<li><a href="#code-36">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-dict">T3 dict</a>
-<ul>
-<li><a href="#problem-37">Problem</a></li>
-<li><a href="#sol-37">Sol</a></li>
-<li><a href="#code-37">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E4%B8%89%E6%9C%88%E9%9B%86%E8%AE%AD-day-5">三月集训 Day 5</a>
-<ul>
-<li><a href="#t1-%E4%B9%B0%E5%88%B0">T1 买到</a>
-<ul>
-<li><a href="#problem-38">Problem</a></li>
-<li><a href="#sol-38">Sol</a></li>
-<li><a href="#code-38">Code</a></li>
-</ul>
-</li>
-<li><a href="#t2-%E5%8F%A3%E7%BD%A9">T2 口罩</a>
-<ul>
-<li><a href="#problem-39">Problem</a></li>
-<li><a href="#sol-39">Sol</a></li>
-<li><a href="#code-39">Code</a></li>
-</ul>
-</li>
-<li><a href="#t3-%E4%BA%86%E5%90%97">T3 了吗</a>
-<ul>
-<li><a href="#problem-40">Problem</a></li>
-<li><a href="#sol-40">Sol</a></li>
-<li><a href="#code-40">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#zroi-%E6%9A%91%E6%9C%9F%E5%8D%81%E8%BF%9E%E6%B5%8B">ZROI 暑期十连测</a>
-<ul>
-<li><a href="#day1-t1-h2o">Day1 T1 H2O</a>
-<ul>
-<li><a href="#problem-41">Problem</a></li>
-<li><a href="#sol-41">Sol</a></li>
-<li><a href="#code-41">Code</a></li>
-</ul>
-</li>
-<li><a href="#day1-t2-w2b">Day1 T2 W2B</a>
-<ul>
-<li><a href="#problem-42">Problem</a></li>
-<li><a href="#sol-42">Sol</a></li>
-<li><a href="#code-42">Code</a></li>
-</ul>
-</li>
-<li><a href="#day2-t1-stars">Day2 T1 Stars</a>
-<ul>
-<li><a href="#problem-43">Problem</a></li>
-<li><a href="#sol-43">Sol</a></li>
-<li><a href="#code-43">Code</a></li>
-</ul>
-</li>
-<li><a href="#day2-t2-decode">Day2 T2 Decode</a>
-<ul>
-<li><a href="#problem-44">Problem</a></li>
-<li><a href="#sol-44">Sol</a></li>
-<li><a href="#code-44">Code</a></li>
-</ul>
-</li>
-<li><a href="#day3-t1-good-subsegments">Day3 T1 Good Subsegments</a>
-<ul>
-<li><a href="#problem-45">Problem</a></li>
-<li><a href="#sol-45">Sol</a></li>
-<li><a href="#code-45">Code</a></li>
-</ul>
-</li>
-<li><a href="#day3-t2-easy-sum">Day3 T2 Easy Sum</a>
-<ul>
-<li><a href="#problem-46">Problem</a></li>
-<li><a href="#sol-46">Sol</a></li>
-<li><a href="#code-46">Code</a></li>
-</ul>
-</li>
-<li><a href="#day3-t3-funny-cost">Day3 T3 Funny Cost</a>
-<ul>
-<li><a href="#problem-47">Problem</a></li>
-<li><a href="#sol-47">Sol</a></li>
-<li><a href="#code-47">Code</a></li>
-</ul>
-</li>
-<li><a href="#day4-t1-alternating-paths">Day4 T1 Alternating Paths</a>
-<ul>
-<li><a href="#problem-48">Problem</a></li>
-<li><a href="#sol-48">Sol</a></li>
-<li><a href="#code-48">Code</a></li>
-</ul>
-</li>
-<li><a href="#day4-t2-dispatch-money">Day4 T2 Dispatch Money</a>
-<ul>
-<li><a href="#problem-49">Problem</a></li>
-<li><a href="#sol-49">Sol</a></li>
-<li><a href="#code-49">Code</a></li>
-</ul>
-</li>
-<li><a href="#day4-t3-exercise">Day4 T3 Exercise</a>
-<ul>
-<li><a href="#problem-50">Problem</a></li>
-<li><a href="#sol-50">Sol</a></li>
-<li><a href="#code-50">Code</a></li>
-</ul>
-</li>
-<li><a href="#day5-t1-interstellar">Day5 T1 Interstellar</a>
-<ul>
-<li><a href="#problem-51">Problem</a></li>
-<li><a href="#sol-51">Sol</a></li>
-<li><a href="#code-51">Code</a></li>
-</ul>
-</li>
-<li><a href="#day5-t2-k-bag-sequence">Day5 T2 K-bag Sequence</a>
-<ul>
-<li><a href="#problem-52">Problem</a></li>
-<li><a href="#sol-52">Sol</a></li>
-<li><a href="#code-52">Code</a></li>
-</ul>
-</li>
-<li><a href="#day5-t3-string-cheese">Day5 T3 String Cheese</a>
-<ul>
-<li><a href="#problem-53">Problem</a></li>
-<li><a href="#sol-53">Sol</a></li>
-<li><a href="#code-53">Code</a></li>
-</ul>
-</li>
-<li><a href="#day6-t1-colorful-tree">Day6 T1 Colorful Tree</a>
-<ul>
-<li><a href="#problem-54">Problem</a></li>
-<li><a href="#sol-54">Sol</a></li>
-<li><a href="#code-54">Code</a></li>
-</ul>
-</li>
-<li><a href="#day6-t2-2-cut">Day6 T2 2-cut</a>
-<ul>
-<li><a href="#problem-55">Problem</a></li>
-<li><a href="#sol-55">Sol</a></li>
-<li><a href="#code-55">Code</a></li>
-</ul>
-</li>
-<li><a href="#day6-t3-palindrome">Day6 T3 Palindrome</a>
-<ul>
-<li><a href="#problem-56">Problem</a></li>
-<li><a href="#sol-56">Sol</a></li>
-<li><a href="#code-56">Code</a></li>
-</ul>
-</li>
-<li><a href="#day7-t1-k-shortest-path-on-tree">Day7 T1 K shortest path on tree</a>
-<ul>
-<li><a href="#problem-57">Problem</a></li>
-<li><a href="#sol-57">Sol</a></li>
-<li><a href="#code-57">Code</a></li>
-</ul>
-</li>
-<li><a href="#day7-t2-access">Day7 T2 Access</a>
-<ul>
-<li><a href="#problem-58">Problem</a></li>
-<li><a href="#sol-58">Sol</a></li>
-<li><a href="#code-58">Code</a></li>
-</ul>
-</li>
-<li><a href="#day7-t3-xor-problem">Day7 T3 XOR Problem</a>
-<ul>
-<li><a href="#problem-59">Problem</a></li>
-<li><a href="#sol-59">Sol</a></li>
-<li><a href="#code-59">Code</a></li>
-</ul>
-</li>
-<li><a href="#day8-t1-nim">Day8 T1 Nim</a>
-<ul>
-<li><a href="#problem-60">Problem</a></li>
-<li><a href="#sol-60">Sol</a></li>
-<li><a href="#code-60">Code</a></li>
-</ul>
-</li>
-<li><a href="#day8-t2-subsequence">Day8 T2 Subsequence</a>
-<ul>
-<li><a href="#problem-61">Problem</a></li>
-<li><a href="#sol-61">Sol</a></li>
-<li><a href="#code-61">Code</a></li>
-</ul>
-</li>
-<li><a href="#day8-t3-k-best-subsequence">Day8 T3 K-best-subsequence</a>
-<ul>
-<li><a href="#problem-62">Problem</a></li>
-<li><a href="#sol-62">Sol</a></li>
-<li><a href="#code-62">Code</a></li>
-</ul>
-</li>
-<li><a href="#day9-t1-lxl%E9%A2%98">Day9 T1 lxl题</a>
-<ul>
-<li><a href="#problem-63">Problem</a></li>
-<li><a href="#sol-63">Sol</a></li>
-<li><a href="#code-63">Code</a></li>
-</ul>
-</li>
-<li><a href="#day9-t3-%E9%AD%94%E6%B3%95%E9%A2%98">Day9 T3 魔法题</a>
-<ul>
-<li><a href="#problem-64">Problem</a></li>
-<li><a href="#sol-64">Sol</a></li>
-<li><a href="#code-64">Code</a></li>
-</ul>
-</li>
-<li><a href="#day10-t3-lxl%E9%A2%982">Day10 T3 lxl题2</a>
-<ul>
-<li><a href="#problem-65">Problem</a></li>
-<li><a href="#sol-65">Sol</a></li>
-<li><a href="#code-65">Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-              </div>
             </div>
-          </article>
-        </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://4182543731.github.io/post/ctt2019-problem/">
+                  <h3 class="post-title">
+                    集训队作业 2019 题解
+                  </h3>
+                </a>
+              </div>
+            
 
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://4182543731.github.io/post/ctt2019-problem/">
-              <h3 class="post-title">
-                集训队作业 2019 题解
-              </h3>
-            </a>
+            
+
           </div>
-        
 
-        
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://4182543731.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
+        </div>
       </div>
     </div>
 
-    <script>
-      hljs.initHighlightingOnLoad()
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+AOS.init();
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
+</script>
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
+
+
+
   </body>
 </html>
