@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://4182543731.github.io</id>
+    <title>4182_543_731`s blog</title>
+    <updated>2025-01-10T13:56:32.512Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://4182543731.github.io"/>
+    <link rel="self" href="https://4182543731.github.io/atom.xml"/>
+    <subtitle>您 您 您 您</subtitle>
+    <logo>https://4182543731.github.io/images/avatar.png</logo>
+    <icon>https://4182543731.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2025, 4182_543_731`s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[搬迁]]></title>
+        <id>https://4182543731.github.io/post/moved/</id>
+        <link href="https://4182543731.github.io/post/moved/">
+        </link>
+        <updated>2025-01-10T13:49:39.000Z</updated>
+        <content type="html"><![CDATA[<p>博客已迁至 ________________。</p>
+]]></content>
+    </entry>
+</feed>
